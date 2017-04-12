@@ -16,6 +16,24 @@
 		FB83BD7B1E9D239900FE4971 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7A1E9D239900FE4971 /* EndPoint.swift */; };
 		FB83BD7D1E9D246C00FE4971 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7C1E9D246C00FE4971 /* Request.swift */; };
 		FB83BD801E9D251900FE4971 /* MyReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7F1E9D251900FE4971 /* MyReview.swift */; };
+		FB92FB981E9E646A00D9B127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FB971E9E646A00D9B127 /* AppDelegate.swift */; };
+		FB92FB9A1E9E646A00D9B127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FB991E9E646A00D9B127 /* ViewController.swift */; };
+		FB92FB9D1E9E646A00D9B127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB92FB9B1E9E646A00D9B127 /* Main.storyboard */; };
+		FB92FB9F1E9E646A00D9B127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB92FB9E1E9E646A00D9B127 /* Assets.xcassets */; };
+		FB92FBA21E9E646A00D9B127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB92FBA01E9E646A00D9B127 /* LaunchScreen.storyboard */; };
+		FB92FBAD1E9E646A00D9B127 /* yotpoUsageExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FBAC1E9E646A00D9B127 /* yotpoUsageExampleTests.swift */; };
+		FB92FBB81E9E646A00D9B127 /* yotpoUsageExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FBB71E9E646A00D9B127 /* yotpoUsageExampleUITests.swift */; };
+		FB92FBC31E9E647600D9B127 /* yotpoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */; };
+		FB92FBC41E9E64A500D9B127 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB83BD701E9D22A400FE4971 /* Alamofire.framework */; };
+		FB92FBC51E9E64A500D9B127 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB83BD701E9D22A400FE4971 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB92FBC81E9E650D00D9B127 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FBC71E9E650D00D9B127 /* API.swift */; };
+		FBC9A3831E9E9A100053E597 /* ProductReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3821E9E9A100053E597 /* ProductReviews.swift */; };
+		FBC9A3851E9EA2C10053E597 /* UserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3841E9EA2C10053E597 /* UserReview.swift */; };
+		FBC9A3871E9EA9F70053E597 /* ProductDetailReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3861E9EA9F70053E597 /* ProductDetailReview.swift */; };
+		FBC9A3891E9EAABA0053E597 /* SocialLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3881E9EAABA0053E597 /* SocialLinks.swift */; };
+		FBC9A38B1E9EADBC0053E597 /* BottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A38A1E9EADBC0053E597 /* BottomLine.swift */; };
+		FBC9A38D1E9EAF270053E597 /* StarDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A38C1E9EAF270053E597 /* StarDistribution.swift */; };
+		FBC9A38F1E9EB1950053E597 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A38E1E9EB1950053E597 /* Pagination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +43,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = FB7575DE1E9D08CC00D1E844;
 			remoteInfo = yotpoKit;
+		};
+		FB92FBA91E9E646A00D9B127 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB7575D61E9D08CC00D1E844 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB92FB941E9E646A00D9B127;
+			remoteInfo = yotpoUsageExample;
+		};
+		FB92FBB41E9E646A00D9B127 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB7575D61E9D08CC00D1E844 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB92FB941E9E646A00D9B127;
+			remoteInfo = yotpoUsageExample;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -37,6 +69,17 @@
 			files = (
 				FB83BD711E9D22A400FE4971 /* Alamofire.framework in CopyFiles */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB92FBC61E9E64A500D9B127 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FB92FBC51E9E64A500D9B127 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -54,6 +97,27 @@
 		FB83BD7A1E9D239900FE4971 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		FB83BD7C1E9D246C00FE4971 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		FB83BD7F1E9D251900FE4971 /* MyReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReview.swift; sourceTree = "<group>"; };
+		FB92FB951E9E646A00D9B127 /* yotpoUsageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yotpoUsageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB92FB971E9E646A00D9B127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB92FB991E9E646A00D9B127 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB92FB9C1E9E646A00D9B127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB92FB9E1E9E646A00D9B127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB92FBA11E9E646A00D9B127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB92FBA31E9E646A00D9B127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB92FBA81E9E646A00D9B127 /* yotpoUsageExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yotpoUsageExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB92FBAC1E9E646A00D9B127 /* yotpoUsageExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yotpoUsageExampleTests.swift; sourceTree = "<group>"; };
+		FB92FBAE1E9E646A00D9B127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB92FBB31E9E646A00D9B127 /* yotpoUsageExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yotpoUsageExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB92FBB71E9E646A00D9B127 /* yotpoUsageExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yotpoUsageExampleUITests.swift; sourceTree = "<group>"; };
+		FB92FBB91E9E646A00D9B127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB92FBC71E9E650D00D9B127 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FBC9A3821E9E9A100053E597 /* ProductReviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductReviews.swift; sourceTree = "<group>"; };
+		FBC9A3841E9EA2C10053E597 /* UserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserReview.swift; sourceTree = "<group>"; };
+		FBC9A3861E9EA9F70053E597 /* ProductDetailReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailReview.swift; sourceTree = "<group>"; };
+		FBC9A3881E9EAABA0053E597 /* SocialLinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLinks.swift; sourceTree = "<group>"; };
+		FBC9A38A1E9EADBC0053E597 /* BottomLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomLine.swift; sourceTree = "<group>"; };
+		FBC9A38C1E9EAF270053E597 /* StarDistribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarDistribution.swift; sourceTree = "<group>"; };
+		FBC9A38E1E9EB1950053E597 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +137,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB92FB921E9E646A00D9B127 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB92FBC31E9E647600D9B127 /* yotpoKit.framework in Frameworks */,
+				FB92FBC41E9E64A500D9B127 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB92FBA51E9E646A00D9B127 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB92FBB01E9E646A00D9B127 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +168,9 @@
 			children = (
 				FB7575E11E9D08CC00D1E844 /* yotpoKit */,
 				FB7575EC1E9D08CC00D1E844 /* yotpoKitTests */,
+				FB92FB961E9E646A00D9B127 /* yotpoUsageExample */,
+				FB92FBAB1E9E646A00D9B127 /* yotpoUsageExampleTests */,
+				FB92FBB61E9E646A00D9B127 /* yotpoUsageExampleUITests */,
 				FB7575E01E9D08CC00D1E844 /* Products */,
 				FB83BD6C1E9D229700FE4971 /* Frameworks */,
 			);
@@ -91,6 +181,9 @@
 			children = (
 				FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */,
 				FB7575E81E9D08CC00D1E844 /* yotpoKitTests.xctest */,
+				FB92FB951E9E646A00D9B127 /* yotpoUsageExample.app */,
+				FB92FBA81E9E646A00D9B127 /* yotpoUsageExampleTests.xctest */,
+				FB92FBB31E9E646A00D9B127 /* yotpoUsageExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +221,14 @@
 		FB83BD741E9D22CA00FE4971 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FBC9A3821E9E9A100053E597 /* ProductReviews.swift */,
 				FB83BD721E9D22C300FE4971 /* Review.swift */,
+				FBC9A3841E9EA2C10053E597 /* UserReview.swift */,
+				FBC9A3861E9EA9F70053E597 /* ProductDetailReview.swift */,
+				FBC9A3881E9EAABA0053E597 /* SocialLinks.swift */,
+				FBC9A38A1E9EADBC0053E597 /* BottomLine.swift */,
+				FBC9A38C1E9EAF270053E597 /* StarDistribution.swift */,
+				FBC9A38E1E9EB1950053E597 /* Pagination.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -138,6 +238,7 @@
 			children = (
 				FB83BD7A1E9D239900FE4971 /* EndPoint.swift */,
 				FB83BD7C1E9D246C00FE4971 /* Request.swift */,
+				FB92FBC71E9E650D00D9B127 /* API.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -148,6 +249,37 @@
 				FB83BD7F1E9D251900FE4971 /* MyReview.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		FB92FB961E9E646A00D9B127 /* yotpoUsageExample */ = {
+			isa = PBXGroup;
+			children = (
+				FB92FB971E9E646A00D9B127 /* AppDelegate.swift */,
+				FB92FB991E9E646A00D9B127 /* ViewController.swift */,
+				FB92FB9B1E9E646A00D9B127 /* Main.storyboard */,
+				FB92FB9E1E9E646A00D9B127 /* Assets.xcassets */,
+				FB92FBA01E9E646A00D9B127 /* LaunchScreen.storyboard */,
+				FB92FBA31E9E646A00D9B127 /* Info.plist */,
+			);
+			path = yotpoUsageExample;
+			sourceTree = "<group>";
+		};
+		FB92FBAB1E9E646A00D9B127 /* yotpoUsageExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB92FBAC1E9E646A00D9B127 /* yotpoUsageExampleTests.swift */,
+				FB92FBAE1E9E646A00D9B127 /* Info.plist */,
+			);
+			path = yotpoUsageExampleTests;
+			sourceTree = "<group>";
+		};
+		FB92FBB61E9E646A00D9B127 /* yotpoUsageExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB92FBB71E9E646A00D9B127 /* yotpoUsageExampleUITests.swift */,
+				FB92FBB91E9E646A00D9B127 /* Info.plist */,
+			);
+			path = yotpoUsageExampleUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +333,60 @@
 			productReference = FB7575E81E9D08CC00D1E844 /* yotpoKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FB92FB941E9E646A00D9B127 /* yotpoUsageExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB92FBC01E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExample" */;
+			buildPhases = (
+				FB92FB911E9E646A00D9B127 /* Sources */,
+				FB92FB921E9E646A00D9B127 /* Frameworks */,
+				FB92FB931E9E646A00D9B127 /* Resources */,
+				FB92FBC61E9E64A500D9B127 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yotpoUsageExample;
+			productName = yotpoUsageExample;
+			productReference = FB92FB951E9E646A00D9B127 /* yotpoUsageExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB92FBA71E9E646A00D9B127 /* yotpoUsageExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB92FBC11E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExampleTests" */;
+			buildPhases = (
+				FB92FBA41E9E646A00D9B127 /* Sources */,
+				FB92FBA51E9E646A00D9B127 /* Frameworks */,
+				FB92FBA61E9E646A00D9B127 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB92FBAA1E9E646A00D9B127 /* PBXTargetDependency */,
+			);
+			name = yotpoUsageExampleTests;
+			productName = yotpoUsageExampleTests;
+			productReference = FB92FBA81E9E646A00D9B127 /* yotpoUsageExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB92FBB21E9E646A00D9B127 /* yotpoUsageExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB92FBC21E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExampleUITests" */;
+			buildPhases = (
+				FB92FBAF1E9E646A00D9B127 /* Sources */,
+				FB92FBB01E9E646A00D9B127 /* Frameworks */,
+				FB92FBB11E9E646A00D9B127 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB92FBB51E9E646A00D9B127 /* PBXTargetDependency */,
+			);
+			name = yotpoUsageExampleUITests;
+			productName = yotpoUsageExampleUITests;
+			productReference = FB92FBB31E9E646A00D9B127 /* yotpoUsageExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +408,23 @@
 						DevelopmentTeam = PFQ8633X58;
 						ProvisioningStyle = Automatic;
 					};
+					FB92FB941E9E646A00D9B127 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = PFQ8633X58;
+						ProvisioningStyle = Automatic;
+					};
+					FB92FBA71E9E646A00D9B127 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = PFQ8633X58;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FB92FB941E9E646A00D9B127;
+					};
+					FB92FBB21E9E646A00D9B127 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = PFQ8633X58;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FB92FB941E9E646A00D9B127;
+					};
 				};
 			};
 			buildConfigurationList = FB7575D91E9D08CC00D1E844 /* Build configuration list for PBXProject "yotpoKit" */;
@@ -230,6 +433,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FB7575D51E9D08CC00D1E844;
 			productRefGroup = FB7575E01E9D08CC00D1E844 /* Products */;
@@ -238,6 +442,9 @@
 			targets = (
 				FB7575DE1E9D08CC00D1E844 /* yotpoKit */,
 				FB7575E71E9D08CC00D1E844 /* yotpoKitTests */,
+				FB92FB941E9E646A00D9B127 /* yotpoUsageExample */,
+				FB92FBA71E9E646A00D9B127 /* yotpoUsageExampleTests */,
+				FB92FBB21E9E646A00D9B127 /* yotpoUsageExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +464,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB92FB931E9E646A00D9B127 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB92FBA21E9E646A00D9B127 /* LaunchScreen.storyboard in Resources */,
+				FB92FB9F1E9E646A00D9B127 /* Assets.xcassets in Resources */,
+				FB92FB9D1E9E646A00D9B127 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB92FBA61E9E646A00D9B127 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB92FBB11E9E646A00D9B127 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -264,10 +495,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBC9A3851E9EA2C10053E597 /* UserReview.swift in Sources */,
 				FB83BD7B1E9D239900FE4971 /* EndPoint.swift in Sources */,
+				FBC9A3871E9EA9F70053E597 /* ProductDetailReview.swift in Sources */,
+				FBC9A3891E9EAABA0053E597 /* SocialLinks.swift in Sources */,
 				FB83BD801E9D251900FE4971 /* MyReview.swift in Sources */,
 				FB83BD7D1E9D246C00FE4971 /* Request.swift in Sources */,
 				FB83BD731E9D22C300FE4971 /* Review.swift in Sources */,
+				FB92FBC81E9E650D00D9B127 /* API.swift in Sources */,
+				FBC9A38B1E9EADBC0053E597 /* BottomLine.swift in Sources */,
+				FBC9A38F1E9EB1950053E597 /* Pagination.swift in Sources */,
+				FBC9A38D1E9EAF270053E597 /* StarDistribution.swift in Sources */,
+				FBC9A3831E9E9A100053E597 /* ProductReviews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +518,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB92FB911E9E646A00D9B127 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB92FB9A1E9E646A00D9B127 /* ViewController.swift in Sources */,
+				FB92FB981E9E646A00D9B127 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB92FBA41E9E646A00D9B127 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB92FBAD1E9E646A00D9B127 /* yotpoUsageExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB92FBAF1E9E646A00D9B127 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB92FBB81E9E646A00D9B127 /* yotpoUsageExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -287,7 +551,36 @@
 			target = FB7575DE1E9D08CC00D1E844 /* yotpoKit */;
 			targetProxy = FB7575EA1E9D08CC00D1E844 /* PBXContainerItemProxy */;
 		};
+		FB92FBAA1E9E646A00D9B127 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB92FB941E9E646A00D9B127 /* yotpoUsageExample */;
+			targetProxy = FB92FBA91E9E646A00D9B127 /* PBXContainerItemProxy */;
+		};
+		FB92FBB51E9E646A00D9B127 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB92FB941E9E646A00D9B127 /* yotpoUsageExample */;
+			targetProxy = FB92FBB41E9E646A00D9B127 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB92FB9B1E9E646A00D9B127 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB92FB9C1E9E646A00D9B127 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB92FBA01E9E646A00D9B127 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB92FBA11E9E646A00D9B127 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FB7575F11E9D08CC00D1E844 /* Debug */ = {
@@ -468,6 +761,98 @@
 			};
 			name = Release;
 		};
+		FB92FBBA1E9E646A00D9B127 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PFQ8633X58;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = yotpoUsageExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FB92FBBB1E9E646A00D9B127 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PFQ8633X58;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = yotpoUsageExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FB92FBBC1E9E646A00D9B127 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PFQ8633X58;
+				INFOPLIST_FILE = yotpoUsageExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yotpoUsageExample.app/yotpoUsageExample";
+			};
+			name = Debug;
+		};
+		FB92FBBD1E9E646A00D9B127 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PFQ8633X58;
+				INFOPLIST_FILE = yotpoUsageExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yotpoUsageExample.app/yotpoUsageExample";
+			};
+			name = Release;
+		};
+		FB92FBBE1E9E646A00D9B127 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = PFQ8633X58;
+				INFOPLIST_FILE = yotpoUsageExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = yotpoUsageExample;
+			};
+			name = Debug;
+		};
+		FB92FBBF1E9E646A00D9B127 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = PFQ8633X58;
+				INFOPLIST_FILE = yotpoUsageExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = yotpoUsageExample;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -494,6 +879,33 @@
 			buildConfigurations = (
 				FB7575F71E9D08CC00D1E844 /* Debug */,
 				FB7575F81E9D08CC00D1E844 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB92FBC01E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB92FBBA1E9E646A00D9B127 /* Debug */,
+				FB92FBBB1E9E646A00D9B127 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB92FBC11E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB92FBBC1E9E646A00D9B127 /* Debug */,
+				FB92FBBD1E9E646A00D9B127 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB92FBC21E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB92FBBE1E9E646A00D9B127 /* Debug */,
+				FB92FBBF1E9E646A00D9B127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
