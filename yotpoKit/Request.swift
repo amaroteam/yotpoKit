@@ -12,9 +12,14 @@ open class Request {
     
     //Generic typealias for completions
     public typealias completionWithServerResponse = (_ code: Int, _ msg: String)->Void
-    open var appKey = "0eU0TYNuFzWbeD60wD2lB7UWnCbAkVtX3vwtaEH0"
+    open var appKey: String = ""
+    open var clientSecret:String = ""
     
-    init() {}
+    convenience init(appK:String,clientS:String) {
+        self.init()
+        appKey = appK
+        clientSecret = clientS
+    }
 }
 
 extension Request {

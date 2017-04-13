@@ -12,12 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myReview = API().myReview
-        myReview.getReviews(product_id: "20005996") { (code, msg, reviews) in
-            if let rec = reviews {
-                print(rec)
-            }
-        }
+        let myReview = API(appK: "0eU0TYNuFzWbeD60wD2lB7UWnCbAkVtX3vwtaEH0", clientS: "lYJniXPbu5AD0pY8fEUBvVYKIT54TWUIdXd7NKUz").myReview
+       
         
     }
 

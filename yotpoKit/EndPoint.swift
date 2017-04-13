@@ -10,12 +10,30 @@ import Foundation
 import Alamofire
 
 struct Endpoint {
-    typealias endPointType       = (URI: String, method: Alamofire.HTTPMethod)
+    typealias EndPointType       = (URI: String, method: Alamofire.HTTPMethod)
+
 }
 
 extension Endpoint {
-    static let appKey = Request().appKey
-    static let create : endPointType = ("https://api.yotpo.com/v1/widget/reviews", .post)
-    static let getReviews : endPointType = ("https://api.yotpo.com/v1/widget/\(appKey)/products/", .get)
-    static let getReviewsPage : endPointType = ("https://api.yotpo.com/products/", .get)
+    func getReviews(productId:String, appKey:String, perPage:Int)->EndPointType {
+        return ("https://api.yotpo.com/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)", .get)
+    }
+    
+    func getReviewsPage(productId:String, appKey:String, perPage:Int, page:Int)->EndPointType {
+        return ("https://api.yotpo.com/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)?page=\(page)", .get)
+    }
+    
+    func saveVote(reviewId:String,vote: VoteType)->EndPointType {
+        switch vote {
+        case .like:
+            return ("https://api.yotpo.com/reviews/\(reviewId)/vote/up", .get)
+        case .unlike:
+            return ("https://api.yotpo.com/reviews/\(reviewId)/vote/down", .get)
+        }
+    }
+}
+
+public enum VoteType {
+        case like
+        case unlike
 }

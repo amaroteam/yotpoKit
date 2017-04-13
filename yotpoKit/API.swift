@@ -10,15 +10,20 @@ import Foundation
 
 ///The API base that is reponsable to instatianciate the all the others request.
 open class API {
-    //fileprivate let appKey = Request().appKey
     
-    public init() {
+    fileprivate let appKey: String
+    fileprivate let clientSecret:String
+    
+    public init(appK:String,clientS:String ) {
+    
+        appKey = appK
+        clientSecret = clientS
     }
     
     fileprivate var _myReview: MyReview?
     open var myReview: MyReview {
         if _myReview == nil {
-            _myReview = MyReview()
+            _myReview = MyReview(appK: appKey, clientS: clientSecret)
         }
         return _myReview!
     }
