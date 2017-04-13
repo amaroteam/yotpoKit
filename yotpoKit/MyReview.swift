@@ -62,7 +62,7 @@ open class MyReview: Request {
         }
     }
     
-    open func saveVote(reviewId:String, voteType:VoteType, completion: @escaping completionDefault) {
+    open func saveVoteReview(reviewId:String, voteType:VoteType, completion: @escaping completionDefault) {
         let endPoint = Endpoint().saveVote(reviewId: reviewId, vote: voteType)
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
@@ -81,6 +81,45 @@ open class MyReview: Request {
                 completion(getMessage.InternetError.code, getMessage.InternetError.msg)
             }
         }
+    }
+    
+    open func saveReview(post:Post, completion: @escaping completionDefault) {
+        let parameter = convertPostToParameter(post: post)
+        
+        Alamofire.request(Endpoint.saveReview.URI, method: Endpoint.saveReview.method, parameters: parameter).responseJSON { (response) in
+            switch response.result {
+            case .success:
+                guard let JSON = response.result.value as? [String: AnyObject],
+                    let code = JSON["code"] as? Int,
+                    let message = JSON["message"] as? String,
+                    code == 200  else {
+                        completion(getMessage.ParsingError.code, getMessage.ParsingError.msg)
+                        return
+                }
+                completion(code, message)
+                
+            case .failure:
+                completion(getMessage.InternetError.code, getMessage.InternetError.msg)
+            }
+        }
+    }
+    
+    
+    func convertPostToParameter(post:Post)->[String:Any] {
+        let parameter = [
+            "appkey"        :appKey,
+            "sku"           :post.sku,
+            "product_title" :post.productTitle,
+            "product_url"   :post.productUrl,
+            "display_name"  :post.displayName,
+            "email"         :post.email,
+            "review_content":post.reviewContent,
+            "review_title"  :post.reviewTitle,
+            "review_score"  :post.reviewScore,
+            "review_source" :"widget_v2"
+        ] as [String : Any]
+        
+        return parameter
     }
     
      

@@ -15,6 +15,9 @@ struct Endpoint {
 }
 
 extension Endpoint {
+    
+    static let saveReview: EndPointType = ("https://api.yotpo.com/v1/widget/reviews", .post)
+    
     func getReviews(productId:String, appKey:String, perPage:Int)->EndPointType {
         return ("https://api.yotpo.com/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)", .get)
     }
