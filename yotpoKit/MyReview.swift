@@ -12,12 +12,13 @@ import Alamofire
 open class MyReview: Request {
     
     //Aliases to custom closures
-    public typealias completionWithReviews = (_ code: Int, _ msg: String, _ productReviews: ProductReviews?)->Void
-    public typealias completionDefault     = (_ code: Int, _ msg: String)->Void
+    public typealias completionWithReviews      = (_ code: Int, _ msg: String, _ productReviews: ProductReviews?)->Void
+    public typealias completionBottomLine       = (_ code: Int, _ msg: String, _ bottomLine: BottomLine?)->Void
+    public typealias completionDefault          = (_ code: Int, _ msg: String)->Void
     
     
     open func getReviews(productId:String, perPage:Int = 150, completion: @escaping completionWithReviews) {
-        let endPoint = Endpoint().getReviews(productId: productId, appKey: appKey, perPage: perPage)
+        let endPoint = Endpoint.MyReview().getReviews(productId: productId, appKey: appKey, perPage: perPage)
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
             case .success:
@@ -40,7 +41,7 @@ open class MyReview: Request {
     }
     
     open func getReviewsPage(productId:String, perPage:Int = 150,page:Int, completion: @escaping completionWithReviews) {
-        let endPoint = Endpoint().getReviewsPage(productId: productId, appKey: appKey, perPage: perPage, page: page)
+        let endPoint = Endpoint.MyReview().getReviewsPage(productId: productId, appKey: appKey, perPage: perPage, page: page)
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
             case .success:
@@ -62,16 +63,38 @@ open class MyReview: Request {
         }
     }
     
+    open func getResumeReview(productId:String, completion: @escaping completionBottomLine) {
+        let endPonint = Endpoint.MyReview().getResume(productId: productId, appKey: appKey)
+        Alamofire.request(endPonint.URI, method: endPonint.method).responseJSON { (response) in
+            switch response.result {
+            case .success:
+                guard let JSON = response.result.value as? [String: AnyObject],
+                    let code = JSON["status"]?["code"] as? Int,
+                    let message = JSON["status"]?["message"] as? String,
+                    let resumeDict = JSON["response"]?["bottomline"] as? [String: AnyObject],
+                    code == 200  else {
+                        completion(getMessage.ParsingError.code, "\(getMessage.ParsingError.msg) Confira o id do produto.",nil)
+                        return
+                }
+                let bottomLine = BottomLine(dic: resumeDict)
+                completion(code, message, bottomLine)
+                
+                
+            case .failure:
+                completion(getMessage.InternetError.code, getMessage.InternetError.msg,nil)
+            }
+        }
+    }
+    
     open func saveVoteReview(reviewId:String, voteType:VoteType, completion: @escaping completionDefault) {
-        let endPoint = Endpoint().saveVote(reviewId: reviewId, vote: voteType)
+        let endPoint = Endpoint.MyReview().saveVote(reviewId: reviewId, vote: voteType)
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
             case .success:
                 guard let JSON = response.result.value as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String,
-                    code == 200,
-                    message == "OK" else {
+                    let _ = JSON["response"] as? [String: AnyObject] else {
                         completion(getMessage.ParsingError.code, getMessage.ParsingError.msg)
                         return
                 }
@@ -84,9 +107,9 @@ open class MyReview: Request {
     }
     
     open func saveReview(post:Post, completion: @escaping completionDefault) {
-        let parameter = convertPostToParameter(post: post)
+        let parameter = post.convertToParameterReview(appKey: appKey)
         
-        Alamofire.request(Endpoint.saveReview.URI, method: Endpoint.saveReview.method, parameters: parameter).responseJSON { (response) in
+        Alamofire.request(Endpoint.MyReview.saveReview.URI, method: Endpoint.MyReview.saveReview.method, parameters: parameter).responseJSON { (response) in
             switch response.result {
             case .success:
                 guard let JSON = response.result.value as? [String: AnyObject],
@@ -105,22 +128,7 @@ open class MyReview: Request {
     }
     
     
-    func convertPostToParameter(post:Post)->[String:Any] {
-        let parameter = [
-            "appkey"        :appKey,
-            "sku"           :post.sku,
-            "product_title" :post.productTitle,
-            "product_url"   :post.productUrl,
-            "display_name"  :post.displayName,
-            "email"         :post.email,
-            "review_content":post.reviewContent,
-            "review_title"  :post.reviewTitle,
-            "review_score"  :post.reviewScore,
-            "review_source" :"widget_v2"
-        ] as [String : Any]
-        
-        return parameter
-    }
     
+
      
 }

@@ -15,7 +15,6 @@ open class API {
     fileprivate let clientSecret:String
     
     public init(appK:String,clientS:String ) {
-    
         appKey = appK
         clientSecret = clientS
     }
@@ -26,5 +25,21 @@ open class API {
             _myReview = MyReview(appK: appKey, clientS: clientSecret)
         }
         return _myReview!
+    }
+    
+    fileprivate var _myQuestion: MyQuestion?
+    open var myQuestion: MyQuestion {
+        if _myQuestion == nil {
+            _myQuestion = MyQuestion(appK: appKey, clientS: clientSecret)
+        }
+        return _myQuestion!
+    }
+    
+    fileprivate var _myService: MyService?
+    open var myService: MyService {
+        if _myService == nil {
+            _myService = MyService(appK: appKey, clientS: clientSecret)
+        }
+        return _myService!
     }
 }

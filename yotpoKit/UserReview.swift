@@ -12,7 +12,7 @@ public struct UserReview {
     public var socialImage          : String    = ""
     public var userType             : String    = ""
     public var userId               : Int       = 0
-    public var is_social_connected  : Int       = 0
+    public var isSocialConnected    : Int       = 0
     
     public init() {}
     
@@ -21,7 +21,7 @@ public struct UserReview {
         socialImage         = dic["social_image"]            as? String ?? ""
         userType            = dic["user_type"]               as? String ?? ""
         userId              = dic["user_id"]                 as? Int ?? 0
-        is_social_connected = dic["is_social_connected"]     as? Int ?? 0
+        isSocialConnected   = dic["is_social_connected"]     as? Int ?? 0
     }
     
 }
