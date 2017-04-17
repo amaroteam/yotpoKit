@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB4313101EA50048008A4B37 /* ProductQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43130F1EA50048008A4B37 /* ProductQuestion.swift */; };
+		FB4313121EA502DD008A4B37 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313111EA502DD008A4B37 /* Question.swift */; };
+		FB4313141EA50560008A4B37 /* Asker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313131EA50560008A4B37 /* Asker.swift */; };
+		FB4313161EA50C67008A4B37 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313151EA50C67008A4B37 /* Answer.swift */; };
+		FB43131A1EA522B0008A4B37 /* BadgeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313191EA522B0008A4B37 /* BadgeObject.swift */; };
 		FB7575E91E9D08CC00D1E844 /* yotpoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */; };
 		FB7575EE1E9D08CC00D1E844 /* yotpoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7575ED1E9D08CC00D1E844 /* yotpoKitTests.swift */; };
 		FB7575F01E9D08CC00D1E844 /* yotpoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7575E21E9D08CC00D1E844 /* yotpoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,6 +21,8 @@
 		FB83BD7B1E9D239900FE4971 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7A1E9D239900FE4971 /* EndPoint.swift */; };
 		FB83BD7D1E9D246C00FE4971 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7C1E9D246C00FE4971 /* Request.swift */; };
 		FB83BD801E9D251900FE4971 /* MyReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7F1E9D251900FE4971 /* MyReview.swift */; };
+		FB8DB6631EA4EE0C0006B8BB /* MyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DB6621EA4EE0C0006B8BB /* MyQuestion.swift */; };
+		FB8DB6651EA4EE1B0006B8BB /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DB6641EA4EE1B0006B8BB /* MyService.swift */; };
 		FB92FB981E9E646A00D9B127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FB971E9E646A00D9B127 /* AppDelegate.swift */; };
 		FB92FB9A1E9E646A00D9B127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FB991E9E646A00D9B127 /* ViewController.swift */; };
 		FB92FB9D1E9E646A00D9B127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB92FB9B1E9E646A00D9B127 /* Main.storyboard */; };
@@ -86,6 +93,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FB43130F1EA50048008A4B37 /* ProductQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductQuestion.swift; sourceTree = "<group>"; };
+		FB4313111EA502DD008A4B37 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		FB4313131EA50560008A4B37 /* Asker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asker.swift; sourceTree = "<group>"; };
+		FB4313151EA50C67008A4B37 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		FB4313191EA522B0008A4B37 /* BadgeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeObject.swift; sourceTree = "<group>"; };
 		FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = yotpoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7575E21E9D08CC00D1E844 /* yotpoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yotpoKit.h; sourceTree = "<group>"; };
 		FB7575E31E9D08CC00D1E844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +110,8 @@
 		FB83BD7A1E9D239900FE4971 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		FB83BD7C1E9D246C00FE4971 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		FB83BD7F1E9D251900FE4971 /* MyReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReview.swift; sourceTree = "<group>"; };
+		FB8DB6621EA4EE0C0006B8BB /* MyQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuestion.swift; sourceTree = "<group>"; };
+		FB8DB6641EA4EE1B0006B8BB /* MyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 		FB92FB951E9E646A00D9B127 /* yotpoUsageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yotpoUsageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB92FB971E9E646A00D9B127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB92FB991E9E646A00D9B127 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +179,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB43130E1EA4FFEF008A4B37 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				FB43130F1EA50048008A4B37 /* ProductQuestion.swift */,
+				FB4313111EA502DD008A4B37 /* Question.swift */,
+				FB4313131EA50560008A4B37 /* Asker.swift */,
+				FB4313191EA522B0008A4B37 /* BadgeObject.swift */,
+				FB4313151EA50C67008A4B37 /* Answer.swift */,
+			);
+			name = Question;
+			sourceTree = "<group>";
+		};
 		FB7575D51E9D08CC00D1E844 = {
 			isa = PBXGroup;
 			children = (
@@ -223,15 +249,8 @@
 		FB83BD741E9D22CA00FE4971 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FBC9A3821E9E9A100053E597 /* ProductReviews.swift */,
-				FB83BD721E9D22C300FE4971 /* Review.swift */,
-				FBC9A3841E9EA2C10053E597 /* UserReview.swift */,
-				FBC9A3861E9EA9F70053E597 /* ProductDetailReview.swift */,
-				FBC9A3881E9EAABA0053E597 /* SocialLinks.swift */,
-				FBC9A38A1E9EADBC0053E597 /* BottomLine.swift */,
-				FBC9A38C1E9EAF270053E597 /* StarDistribution.swift */,
-				FBC9A38E1E9EB1950053E597 /* Pagination.swift */,
-				FBA49C401EA0127E000A5FBE /* Post.swift */,
+				FB43130E1EA4FFEF008A4B37 /* Question */,
+				FB8DB6611EA4EC780006B8BB /* Reviews */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -250,8 +269,26 @@
 			isa = PBXGroup;
 			children = (
 				FB83BD7F1E9D251900FE4971 /* MyReview.swift */,
+				FB8DB6621EA4EE0C0006B8BB /* MyQuestion.swift */,
+				FB8DB6641EA4EE1B0006B8BB /* MyService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		FB8DB6611EA4EC780006B8BB /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				FBC9A3821E9E9A100053E597 /* ProductReviews.swift */,
+				FB83BD721E9D22C300FE4971 /* Review.swift */,
+				FBC9A3841E9EA2C10053E597 /* UserReview.swift */,
+				FBC9A3861E9EA9F70053E597 /* ProductDetailReview.swift */,
+				FBC9A3881E9EAABA0053E597 /* SocialLinks.swift */,
+				FBC9A38A1E9EADBC0053E597 /* BottomLine.swift */,
+				FBC9A38C1E9EAF270053E597 /* StarDistribution.swift */,
+				FBC9A38E1E9EB1950053E597 /* Pagination.swift */,
+				FBA49C401EA0127E000A5FBE /* Post.swift */,
+			);
+			name = Reviews;
 			sourceTree = "<group>";
 		};
 		FB92FB961E9E646A00D9B127 /* yotpoUsageExample */ = {
@@ -500,15 +537,22 @@
 			files = (
 				FBC9A3851E9EA2C10053E597 /* UserReview.swift in Sources */,
 				FB83BD7B1E9D239900FE4971 /* EndPoint.swift in Sources */,
+				FB43131A1EA522B0008A4B37 /* BadgeObject.swift in Sources */,
 				FBC9A3871E9EA9F70053E597 /* ProductDetailReview.swift in Sources */,
+				FB4313121EA502DD008A4B37 /* Question.swift in Sources */,
+				FB4313141EA50560008A4B37 /* Asker.swift in Sources */,
 				FBC9A3891E9EAABA0053E597 /* SocialLinks.swift in Sources */,
 				FBA49C411EA0127E000A5FBE /* Post.swift in Sources */,
 				FB83BD801E9D251900FE4971 /* MyReview.swift in Sources */,
+				FB8DB6651EA4EE1B0006B8BB /* MyService.swift in Sources */,
 				FB83BD7D1E9D246C00FE4971 /* Request.swift in Sources */,
 				FB83BD731E9D22C300FE4971 /* Review.swift in Sources */,
+				FB4313101EA50048008A4B37 /* ProductQuestion.swift in Sources */,
 				FB92FBC81E9E650D00D9B127 /* API.swift in Sources */,
 				FBC9A38B1E9EADBC0053E597 /* BottomLine.swift in Sources */,
+				FB4313161EA50C67008A4B37 /* Answer.swift in Sources */,
 				FBC9A38F1E9EB1950053E597 /* Pagination.swift in Sources */,
+				FB8DB6631EA4EE0C0006B8BB /* MyQuestion.swift in Sources */,
 				FBC9A38D1E9EAF270053E597 /* StarDistribution.swift in Sources */,
 				FBC9A3831E9E9A100053E597 /* ProductReviews.swift in Sources */,
 			);
