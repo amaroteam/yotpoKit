@@ -1,15 +1,15 @@
 //
-//  API.swift
+//  APIYotpo.swift
 //  yotpoKit
 //
-//  Created by Liliane Lima on 12/04/17.
+//  Created by Liliane Lima on 18/04/17.
 //  Copyright © 2017 AMARO Fashion. All rights reserved.
 //
 
 import Foundation
 
 ///The API base that is reponsable to instatianciate the all the others request.
-open class API {
+open class APIYotpo {
     
     fileprivate let appKey: String
     fileprivate let clientSecret:String

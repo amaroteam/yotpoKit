@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-open class MyService: Request {
+open class MyService: RequestYotpo {
     
     //Aliases to custom closures
     public typealias completionWithToken = (_ code: Int, _ msg: String, _ token: String?)->Void

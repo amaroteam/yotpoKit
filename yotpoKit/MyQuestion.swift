@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-open class MyQuestion: Request {
+open class MyQuestion: RequestYotpo {
     
     //Aliases to custom closures
     public typealias completionWithQuestions    = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion?)->Void

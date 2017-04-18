@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-open class MyReview: Request {
+open class MyReview: RequestYotpo {
     
     //Aliases to custom closures
     public typealias completionWithReviews      = (_ code: Int, _ msg: String, _ productReviews: ProductReviews?)->Void
