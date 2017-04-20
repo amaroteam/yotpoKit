@@ -14,6 +14,7 @@ open class MyReview: RequestYotpo {
     //Aliases to custom closures
     public typealias completionWithReviews      = (_ code: Int, _ msg: String, _ productReviews: ProductReviews?)->Void
     public typealias completionBottomLine       = (_ code: Int, _ msg: String, _ bottomLine: BottomLine?)->Void
+    public typealias completionReview           = (_ code: Int, _ msg: String, _ review: Review?)->Void
     public typealias completionDefault          = (_ code: Int, _ msg: String)->Void
     
     
@@ -104,6 +105,28 @@ open class MyReview: RequestYotpo {
                 completion(getMessage.InternetError.code, getMessage.InternetError.msg)
             }
         }
+    }
+    
+    open func getReview(withReviewId reviewId:String,  completion: @escaping completionReview) {
+        let endPoint = Endpoint.MyReview().getReview(reviewId: reviewId)
+        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+            switch response.result {
+            case .success:
+                guard let JSON = response.result.value as? [String: AnyObject],
+                    let code = JSON["status"]?["code"] as? Int,
+                    let message = JSON["status"]?["message"] as? String,
+                    let reviewDict = JSON["response"]?["review"] as? [String: AnyObject] else {
+                        completion(getMessage.ParsingError.code, getMessage.ParsingError.msg, nil)
+                        return
+                }
+                let review = Review(dic: reviewDict)
+                completion(code, message, review)
+                
+            case .failure:
+                completion(getMessage.InternetError.code, getMessage.InternetError.msg, nil)
+            }
+        }
+        
     }
     
     open func saveReview(post:Post, completion: @escaping completionDefault) {

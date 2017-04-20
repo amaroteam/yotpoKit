@@ -31,6 +31,10 @@ extension Endpoint {
             return ("https://api.yotpo.com/products/\(appKey)/\(productId)/bottomline", .get)
         }
         
+        func getReview(reviewId:String)->EndPointType {
+            return ("https://api.yotpo.com/reviews/\(reviewId)", .get)
+        }
+        
         func saveVote(reviewId:String,vote: VoteType)->EndPointType {
             switch vote {
             case .like:
