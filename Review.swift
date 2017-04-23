@@ -23,6 +23,19 @@ public struct Review {
     public var verifiedBuyer    : Bool          = false
     public var user             : UserReview    = UserReview()
     
+    public init() {}
+    
+    public init(titleReview:String, contentReview:String, dateCreated:String, productID:String, scoreReview:Int, userReview:UserReview, voteUp:Int, voteDown:Int ) {
+        content         = contentReview
+        title           = titleReview
+        createdAt       = dateCreated
+        productId       = productID
+        score           = scoreReview
+        user            = userReview
+        votesUp         = voteUp
+        votesDown       = voteDown
+    }
+    
     public init(dic:[String:AnyObject]) {
         content         = dic["content"]            as? String ?? ""
         title           = dic["title"]              as? String ?? ""

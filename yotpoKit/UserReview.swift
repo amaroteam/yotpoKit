@@ -16,6 +16,11 @@ public struct UserReview {
     
     public init() {}
     
+    public init(nameUser:String, image: String?) {
+        displayName = nameUser
+        socialImage = image  as? String ?? ""
+    }
+    
     public init(dic:[String:AnyObject]) {
         displayName         = dic["display_name"]            as? String ?? ""
         socialImage         = dic["social_image"]            as? String ?? ""
