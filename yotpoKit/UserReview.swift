@@ -18,7 +18,7 @@ public struct UserReview {
     
     public init(nameUser:String, image: String?) {
         displayName = nameUser
-        socialImage = image  as? String ?? ""
+        socialImage = image ?? ""
     }
     
     public init(dic:[String:AnyObject]) {
