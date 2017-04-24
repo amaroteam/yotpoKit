@@ -25,7 +25,7 @@ public struct Review {
     
     public init() {}
     
-    public init(titleReview:String, contentReview:String, dateCreated:String, productID:String, scoreReview:Int, userReview:UserReview, voteUp:Int, voteDown:Int ) {
+    public init(titleReview:String, contentReview:String, dateCreated:String, productID:Int, scoreReview:Int, userReview:UserReview, voteUp:Int, voteDown:Int ) {
         content         = contentReview
         title           = titleReview
         createdAt       = dateCreated
