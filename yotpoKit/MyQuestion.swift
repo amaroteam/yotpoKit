@@ -18,7 +18,7 @@ open class MyQuestion: RequestYotpo {
     
     open func getQuestions(productId:String, completion: @escaping completionWithQuestions) {
         let endPoint = Endpoint.MyQuestion().getQuestions(productId: productId, appKey: appKey)
-        
+    
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
             case .success:

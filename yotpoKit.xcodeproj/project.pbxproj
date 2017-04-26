@@ -16,7 +16,6 @@
 		FB7575EE1E9D08CC00D1E844 /* yotpoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7575ED1E9D08CC00D1E844 /* yotpoKitTests.swift */; };
 		FB7575F01E9D08CC00D1E844 /* yotpoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7575E21E9D08CC00D1E844 /* yotpoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB83BD6E1E9D229700FE4971 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB83BD6D1E9D229700FE4971 /* Alamofire.framework */; };
-		FB83BD711E9D22A400FE4971 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB83BD701E9D22A400FE4971 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FB83BD731E9D22C300FE4971 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD721E9D22C300FE4971 /* Review.swift */; };
 		FB83BD7B1E9D239900FE4971 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7A1E9D239900FE4971 /* EndPoint.swift */; };
 		FB83BD801E9D251900FE4971 /* MyReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7F1E9D251900FE4971 /* MyReview.swift */; };
@@ -69,16 +68,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FB83BD6F1E9D229B00FE4971 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 11;
-			files = (
-				FB83BD711E9D22A400FE4971 /* Alamofire.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FB92FBC61E9E64A500D9B127 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,7 +333,6 @@
 				FB7575DB1E9D08CC00D1E844 /* Frameworks */,
 				FB7575DC1E9D08CC00D1E844 /* Headers */,
 				FB7575DD1E9D08CC00D1E844 /* Resources */,
-				FB83BD6F1E9D229B00FE4971 /* CopyFiles */,
 			);
 			buildRules = (
 			);
