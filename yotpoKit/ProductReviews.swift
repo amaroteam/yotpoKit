@@ -16,6 +16,7 @@ public struct ProductReviews {
     public var pagination       : Pagination = Pagination()
     public var bottomLine       : BottomLine = BottomLine()
     
+    public init() {}
     
     public init(dic:[String:AnyObject]) {
         productTags = dic["product_tags"] as? String ?? ""

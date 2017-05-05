@@ -55,6 +55,10 @@ extension Endpoint {
             return ("https://api.yotpo.com/products/\(appKey)/\(productId)/questions", .get)
         }
         
+        func getQuestionPage(productId:String, appKey:String, token:String, page:Int)->EndPointType {
+            return ("https://api.yotpo.com/products/\(appKey)/\(productId)/questions?utoken=\(token)&page=\(page)", .get)
+        }
+        
         func getQuestionResume(productId:String, appKey:String)->EndPointType {
             return ("https://api.yotpo.com/products/\(appKey)/\(productId)/qna_bottomline", .get)
         }

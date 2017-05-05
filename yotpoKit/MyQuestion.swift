@@ -12,11 +12,12 @@ import Alamofire
 open class MyQuestion: RequestYotpo {
     
     //Aliases to custom closures
-    public typealias completionWithQuestions    = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion?)->Void
-    public typealias completionDefault          = (_ code: Int, _ msg: String)->Void
-    public typealias completionQuestion          = (_ code: Int, _ title: String, _ msg:String)->Void
+    public typealias completionWithProductQuestions     = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion?)->Void
+    public typealias completionWithQuestions            = (_ code: Int, _ msg: String, _ questions: [Question])->Void
+    public typealias completionDefault                  = (_ code: Int, _ msg: String)->Void
+    public typealias completionQuestion                 = (_ code: Int, _ title: String, _ msg:String)->Void
     
-    open func getQuestions(productId:String, completion: @escaping completionWithQuestions) {
+    open func getQuestions(productId:String, completion: @escaping completionWithProductQuestions) {
         let endPoint = Endpoint.MyQuestion().getQuestions(productId: productId, appKey: appKey)
     
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
@@ -47,7 +48,39 @@ open class MyQuestion: RequestYotpo {
         }
     }
     
-    open func getQuestionResume(productId:String, completion: @escaping completionWithQuestions) {
+    open func getQuestionPerPage(productId:String, token:String, page:Int, completion: @escaping completionWithQuestions) {
+        let endPoint = Endpoint.MyQuestion().getQuestionPage(productId: productId, appKey: appKey, token: token, page: page)
+        
+        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+            switch response.result {
+            case .success:
+                guard let JSON = response.result.value as? [String: AnyObject],
+                    let code = JSON["status"]?["code"] as? Int,
+                    let message = JSON["status"]?["message"] as? String else {
+                        completion(getMessage.ParsingError.code, getMessage.ParsingError.msg,[])
+                        return
+                }
+                
+                if code == 200 {
+                    guard let questionDict = JSON["response"] as? [String: AnyObject] else {
+                        completion(getMessage.ParsingError.code, getMessage.ParsingError.msg,[])
+                        return
+                    }
+                    
+                    let productQ = ProductQuestion(dic: questionDict)
+                    completion(code, message, productQ.questions)
+                    
+                } else {
+                    completion(code, message, [])
+                }
+            case .failure:
+                completion(getMessage.InternetError.code, getMessage.InternetError.msg, [])
+            }
+        }
+        
+    }
+    
+    open func getQuestionResume(productId:String, completion: @escaping completionWithProductQuestions) {
         let endPoint = Endpoint.MyQuestion().getQuestionResume(productId: productId, appKey: appKey)
         
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
@@ -119,5 +152,24 @@ open class MyQuestion: RequestYotpo {
             
         }
     }
+    
+    open func getNextQuestion(oldProductQuestion:ProductQuestion, productId:String, token:String, completion: @escaping completionWithProductQuestions) {
+        let myOldProductQuestion = oldProductQuestion.questions.filter { (question) -> Bool in
+            return question.id != 0
+        }
+        var newProductQuestion = oldProductQuestion
+        
+        if oldProductQuestion.totalQuestions > myOldProductQuestion.count {
+            let currentPage = myOldProductQuestion.count/5
+            
+            getQuestionPerPage(productId: productId, token: token, page: currentPage+1, completion: { (code, msg, result) in
+                for question in result {
+                    newProductQuestion.questions.append(question)
+                }
+                completion(code, msg, newProductQuestion)
+            })
+        }
+    }
+    
 
 }

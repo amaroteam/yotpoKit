@@ -149,9 +149,5 @@ open class MyReview: RequestYotpo {
             }
         }
     }
-    
-    
-    
-
      
 }

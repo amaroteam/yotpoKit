@@ -34,6 +34,7 @@
 		FBA46CB31EA639720060CBC3 /* RequestYotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA46CB21EA639720060CBC3 /* RequestYotpo.swift */; };
 		FBA46CB51EA639E70060CBC3 /* APIYotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA46CB41EA639E70060CBC3 /* APIYotpo.swift */; };
 		FBA49C411EA0127E000A5FBE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA49C401EA0127E000A5FBE /* Post.swift */; };
+		FBC0ABD41EB8D9E7002F8483 /* ProductYotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0ABD31EB8D9E7002F8483 /* ProductYotpo.swift */; };
 		FBC9A3831E9E9A100053E597 /* ProductReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3821E9E9A100053E597 /* ProductReviews.swift */; };
 		FBC9A3851E9EA2C10053E597 /* UserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3841E9EA2C10053E597 /* UserReview.swift */; };
 		FBC9A3871E9EA9F70053E597 /* ProductDetailReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3861E9EA9F70053E597 /* ProductDetailReview.swift */; };
@@ -116,6 +117,7 @@
 		FBA46CB21EA639720060CBC3 /* RequestYotpo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestYotpo.swift; sourceTree = "<group>"; };
 		FBA46CB41EA639E70060CBC3 /* APIYotpo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIYotpo.swift; sourceTree = "<group>"; };
 		FBA49C401EA0127E000A5FBE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FBC0ABD31EB8D9E7002F8483 /* ProductYotpo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductYotpo.swift; sourceTree = "<group>"; };
 		FBC9A3821E9E9A100053E597 /* ProductReviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductReviews.swift; sourceTree = "<group>"; };
 		FBC9A3841E9EA2C10053E597 /* UserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserReview.swift; sourceTree = "<group>"; };
 		FBC9A3861E9EA9F70053E597 /* ProductDetailReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailReview.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				FB43130E1EA4FFEF008A4B37 /* Question */,
 				FB8DB6611EA4EC780006B8BB /* Reviews */,
+				FBC0ABD31EB8D9E7002F8483 /* ProductYotpo.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC9A3851E9EA2C10053E597 /* UserReview.swift in Sources */,
+				FBC0ABD41EB8D9E7002F8483 /* ProductYotpo.swift in Sources */,
 				FB83BD7B1E9D239900FE4971 /* EndPoint.swift in Sources */,
 				FB43131A1EA522B0008A4B37 /* BadgeObject.swift in Sources */,
 				FBC9A3871E9EA9F70053E597 /* ProductDetailReview.swift in Sources */,

@@ -15,6 +15,7 @@ public struct ProductQuestion {
     public var questions             : [Question]    = []
     
     
+    public init() {}
     
     public init(dic:[String:AnyObject]) {
         totalQuestions  = dic["total_questions"]    as? Int ?? 0
