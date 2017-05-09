@@ -3,7 +3,7 @@
 //  yotpoKit
 //
 //  Created by Liliane Lima on 18/04/17.
-//  Copyright © 2017 AMARO Fashion. All rights reserved.
+//  Copyright © 2017 Liliane Lima . All rights reserved.
 //
 
 import Foundation
@@ -13,11 +13,12 @@ open class RequestYotpo {
     public typealias completionWithServerResponse = (_ code: Int, _ msg: String)->Void
     open var appKey: String = ""
     open var clientSecret:String = ""
+    open var tokenId:String = ""
     
-    convenience init(appK:String,clientS:String) {
-        self.init()
+    init(appK: String, clientS: String, token: String = "") {
         appKey = appK
         clientSecret = clientS
+        tokenId = token
     }
 }
 

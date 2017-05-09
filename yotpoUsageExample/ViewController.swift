@@ -3,7 +3,7 @@
 //  yotpoUsageExample
 //
 //  Created by Liliane Lima on 12/04/17.
-//  Copyright © 2017 AMARO Fashion. All rights reserved.
+//  Copyright © 2017 Liliane Lima. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = APIYotpo(appK: "appKey", clientS: "clientService").myQuestion
+        _ = APIYotpo(appK: "appKey", clientS: "clientSecret").yotpo
     }
 
     override func didReceiveMemoryWarning() {

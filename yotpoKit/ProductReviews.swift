@@ -3,7 +3,7 @@
 //  yotpoKit
 //
 //  Created by Liliane Lima on 12/04/17.
-//  Copyright © 2017 AMARO Fashion. All rights reserved.
+//  Copyright © 2017 Liliane Lima . All rights reserved.
 //
 
 import Foundation

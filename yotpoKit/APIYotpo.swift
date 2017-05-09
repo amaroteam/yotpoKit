@@ -3,7 +3,7 @@
 //  yotpoKit
 //
 //  Created by Liliane Lima on 18/04/17.
-//  Copyright © 2017 AMARO Fashion. All rights reserved.
+//  Copyright © 2017 Liliane Lima . All rights reserved.
 //
 
 import Foundation
@@ -19,27 +19,11 @@ open class APIYotpo {
         clientSecret = clientS
     }
     
-    fileprivate var _myReview: MyReview?
-    open var myReview: MyReview {
-        if _myReview == nil {
-            _myReview = MyReview(appK: appKey, clientS: clientSecret)
+    fileprivate var _yotpo: Yotpo?
+    open var yotpo: Yotpo {
+        if _yotpo == nil {
+            _yotpo = Yotpo(appK: appKey, clientS: clientSecret)
         }
-        return _myReview!
-    }
-    
-    fileprivate var _myQuestion: MyQuestion?
-    open var myQuestion: MyQuestion {
-        if _myQuestion == nil {
-            _myQuestion = MyQuestion(appK: appKey, clientS: clientSecret)
-        }
-        return _myQuestion!
-    }
-    
-    fileprivate var _myService: MyService?
-    open var myService: MyService {
-        if _myService == nil {
-            _myService = MyService(appK: appKey, clientS: clientSecret)
-        }
-        return _myService!
+        return _yotpo!
     }
 }

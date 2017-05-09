@@ -3,7 +3,7 @@
 //  yotpoKit
 //
 //  Created by Liliane Lima on 17/04/17.
-//  Copyright © 2017 AMARO Fashion. All rights reserved.
+//  Copyright © 2017 Liliane Lima. All rights reserved.
 //
 
 import Foundation
@@ -48,8 +48,8 @@ open class MyQuestion: RequestYotpo {
         }
     }
     
-    open func getQuestionPerPage(productId:String, token:String, page:Int, completion: @escaping completionWithQuestions) {
-        let endPoint = Endpoint.MyQuestion().getQuestionPage(productId: productId, appKey: appKey, token: token, page: page)
+    open func getQuestionPerPage(productId:String, page:Int, completion: @escaping completionWithQuestions) {
+        let endPoint = Endpoint.MyQuestion().getQuestionPage(productId: productId, appKey: appKey, token: tokenId, page: page)
         
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
@@ -153,21 +153,19 @@ open class MyQuestion: RequestYotpo {
         }
     }
     
-    open func getNextQuestion(oldProductQuestion:ProductQuestion, productId:String, token:String, completion: @escaping completionWithProductQuestions) {
-        let myOldProductQuestion = oldProductQuestion.questions.filter { (question) -> Bool in
+    open func getNextQuestions(productQuestion:ProductQuestion, productId:String, completion: @escaping completionWithQuestions) {
+        let myOldProductQuestion = productQuestion.questions.filter { (question) -> Bool in
             return question.id != 0
         }
-        var newProductQuestion = oldProductQuestion
         
-        if oldProductQuestion.totalQuestions > myOldProductQuestion.count {
+        if productQuestion.totalQuestions > myOldProductQuestion.count {
             let currentPage = myOldProductQuestion.count/5
             
-            getQuestionPerPage(productId: productId, token: token, page: currentPage+1, completion: { (code, msg, result) in
-                for question in result {
-                    newProductQuestion.questions.append(question)
-                }
-                completion(code, msg, newProductQuestion)
+            getQuestionPerPage(productId: productId, page: currentPage+1, completion: { (code, msg, result) in
+                completion(code, msg, result)
             })
+        } else {
+            completion(2, "There aren't questions to download", [])
         }
     }
     

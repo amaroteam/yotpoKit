@@ -3,7 +3,7 @@
 //  yotpoKit
 //
 //  Created by Liliane Lima on 11/04/17.
-//  Copyright © 2017 AMARO Fashion. All rights reserved.
+//  Copyright © 2017 Liliane Lima . All rights reserved.
 //
 
 import Foundation
@@ -74,9 +74,9 @@ extension Endpoint {
     }
 }
 
-//All Endpoint MyService
+//All Endpoint Yotpo
 extension Endpoint {
-    struct MyService {
+    struct Yotpo {
         static let authentication: EndPointType = ("https://api.yotpo.com/oauth/token", .post)
     }
 }

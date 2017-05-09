@@ -12,6 +12,7 @@
 		FB4313141EA50560008A4B37 /* Asker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313131EA50560008A4B37 /* Asker.swift */; };
 		FB4313161EA50C67008A4B37 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313151EA50C67008A4B37 /* Answer.swift */; };
 		FB43131A1EA522B0008A4B37 /* BadgeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313191EA522B0008A4B37 /* BadgeObject.swift */; };
+		FB66AA0D1EC243780039CF8B /* Yotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66AA0C1EC243780039CF8B /* Yotpo.swift */; };
 		FB7575E91E9D08CC00D1E844 /* yotpoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */; };
 		FB7575EE1E9D08CC00D1E844 /* yotpoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7575ED1E9D08CC00D1E844 /* yotpoKitTests.swift */; };
 		FB7575F01E9D08CC00D1E844 /* yotpoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7575E21E9D08CC00D1E844 /* yotpoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,7 +21,6 @@
 		FB83BD7B1E9D239900FE4971 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7A1E9D239900FE4971 /* EndPoint.swift */; };
 		FB83BD801E9D251900FE4971 /* MyReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7F1E9D251900FE4971 /* MyReview.swift */; };
 		FB8DB6631EA4EE0C0006B8BB /* MyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DB6621EA4EE0C0006B8BB /* MyQuestion.swift */; };
-		FB8DB6651EA4EE1B0006B8BB /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DB6641EA4EE1B0006B8BB /* MyService.swift */; };
 		FB92FB981E9E646A00D9B127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FB971E9E646A00D9B127 /* AppDelegate.swift */; };
 		FB92FB9A1E9E646A00D9B127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FB991E9E646A00D9B127 /* ViewController.swift */; };
 		FB92FB9D1E9E646A00D9B127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB92FB9B1E9E646A00D9B127 /* Main.storyboard */; };
@@ -88,6 +88,7 @@
 		FB4313131EA50560008A4B37 /* Asker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asker.swift; sourceTree = "<group>"; };
 		FB4313151EA50C67008A4B37 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		FB4313191EA522B0008A4B37 /* BadgeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeObject.swift; sourceTree = "<group>"; };
+		FB66AA0C1EC243780039CF8B /* Yotpo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yotpo.swift; sourceTree = "<group>"; };
 		FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = yotpoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7575E21E9D08CC00D1E844 /* yotpoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yotpoKit.h; sourceTree = "<group>"; };
 		FB7575E31E9D08CC00D1E844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,7 +101,6 @@
 		FB83BD7A1E9D239900FE4971 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		FB83BD7F1E9D251900FE4971 /* MyReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReview.swift; sourceTree = "<group>"; };
 		FB8DB6621EA4EE0C0006B8BB /* MyQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuestion.swift; sourceTree = "<group>"; };
-		FB8DB6641EA4EE1B0006B8BB /* MyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 		FB92FB951E9E646A00D9B127 /* yotpoUsageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yotpoUsageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB92FB971E9E646A00D9B127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB92FB991E9E646A00D9B127 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 			children = (
 				FB83BD7F1E9D251900FE4971 /* MyReview.swift */,
 				FB8DB6621EA4EE0C0006B8BB /* MyQuestion.swift */,
-				FB8DB6641EA4EE1B0006B8BB /* MyService.swift */,
+				FB66AA0C1EC243780039CF8B /* Yotpo.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -535,8 +535,8 @@
 				FB4313141EA50560008A4B37 /* Asker.swift in Sources */,
 				FBC9A3891E9EAABA0053E597 /* SocialLinks.swift in Sources */,
 				FBA49C411EA0127E000A5FBE /* Post.swift in Sources */,
+				FB66AA0D1EC243780039CF8B /* Yotpo.swift in Sources */,
 				FB83BD801E9D251900FE4971 /* MyReview.swift in Sources */,
-				FB8DB6651EA4EE1B0006B8BB /* MyService.swift in Sources */,
 				FB83BD731E9D22C300FE4971 /* Review.swift in Sources */,
 				FB4313101EA50048008A4B37 /* ProductQuestion.swift in Sources */,
 				FBA46CB31EA639720060CBC3 /* RequestYotpo.swift in Sources */,

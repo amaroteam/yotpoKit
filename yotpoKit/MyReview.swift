@@ -3,7 +3,7 @@
 //  yotpoKit
 //
 //  Created by Liliane Lima on 11/04/17.
-//  Copyright © 2017 AMARO Fashion. All rights reserved.
+//  Copyright © 2017 Liliane Lima . All rights reserved.
 //
 
 import Foundation
@@ -15,6 +15,7 @@ open class MyReview: RequestYotpo {
     public typealias completionWithReviews      = (_ code: Int, _ msg: String, _ productReviews: ProductReviews?)->Void
     public typealias completionBottomLine       = (_ code: Int, _ msg: String, _ bottomLine: BottomLine?)->Void
     public typealias completionReview           = (_ code: Int, _ msg: String, _ review: Review?)->Void
+    public typealias completionReviews          = (_ code: Int, _ msg: String, _ reviews: [Review])->Void
     public typealias completionDefault          = (_ code: Int, _ msg: String)->Void
     
     
@@ -149,5 +150,27 @@ open class MyReview: RequestYotpo {
             }
         }
     }
-     
+    
+    
+    open func getNextReview(productReview:ProductReviews, perPage:Int = 150, productId:String, completion: @escaping completionReviews) {
+        let myOldProductReviews = productReview.reviews.filter { (review) -> Bool in
+            return review.id != 0
+        }
+        
+        if productReview.bottomLine.totalReview > myOldProductReviews.count {
+            let currentPage = myOldProductReviews.count/perPage
+            
+            getReviewsPage(productId: productId, page: currentPage+1, completion: { (code, msg, productReview) in
+                if let prod = productReview {
+                    completion(code, msg, prod.reviews)
+                } else {
+                    completion(code, msg, [])
+                }
+            })
+        } else {
+            completion(2, "There aren't reviews to download", [])
+        }
+    }
+    
+    
 }
