@@ -9,22 +9,21 @@
 import Foundation
 
 public struct QuestionExhibition {
-    public var displayImage: String = ""
-    public var name:String = ""
-    public var date:String = ""
-    public var contentText: String = ""
-    public var amountAnswer: Int = 0
+    public var displayImage:    String = ""
+    public var name:            String = ""
+    public var date:            String = ""
+    public var contentText:     String = ""
     
-    public var votesUp:Int = 0
-    public var votedDown:Int = 0
+    public var amountAnswer:    Int = 0
+    public var votesUp:         Int = 0
+    public var votedDown:       Int = 0
+    public var idQuestion:      Int = 0
+    public var idAnswer:        Int = 0
     
-    public var typeQuestion:TypeQuestion
+    public var typeQuestion:    TypeQuestion
     
-    public var idQuestion:Int = 0
-    public var idAnswer:Int = 0
-    
-    public var isOpen:Bool = false
-    public var isHidden:Bool = false
+    public var isOpen:          Bool = false
+    public var isHiddenText:    Bool = false
     
    
     public init(withQuestion question:Question) {
@@ -39,7 +38,7 @@ public struct QuestionExhibition {
         votedDown       = 0
         typeQuestion    = .question
         isOpen          = false
-        isHidden        = false
+        isHiddenText    = false
     }
     
     public init(withAnswer answer:Answer, idQuest:Int) {
@@ -54,7 +53,7 @@ public struct QuestionExhibition {
         votedDown       = answer.votedDown
         typeQuestion    = .answer
         isOpen          = false
-        isHidden        = true
+        isHiddenText    = false
     }
 }
 
