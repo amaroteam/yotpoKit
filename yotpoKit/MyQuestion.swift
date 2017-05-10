@@ -169,5 +169,23 @@ open class MyQuestion: RequestYotpo {
         }
     }
     
+    
+    open func convertProductQuestionToUnicArray(productQuestion:ProductQuestion)->[QuestionExhibition] {
+        var questionsExhibition = [QuestionExhibition]()
+        let questions = productQuestion.questions
+        
+        
+        for question in questions {
+            let questExhibition = QuestionExhibition(withQuestion: question)
+            questionsExhibition.append(questExhibition)
+            for answer in question.answers {
+                let answerExhibition = QuestionExhibition(withAnswer: answer, idQuest: question.id)
+                questionsExhibition.append(answerExhibition)
+            }
+        }
+        
+        return questionsExhibition
+    }
+
 
 }

@@ -12,6 +12,7 @@
 		FB4313141EA50560008A4B37 /* Asker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313131EA50560008A4B37 /* Asker.swift */; };
 		FB4313161EA50C67008A4B37 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313151EA50C67008A4B37 /* Answer.swift */; };
 		FB43131A1EA522B0008A4B37 /* BadgeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313191EA522B0008A4B37 /* BadgeObject.swift */; };
+		FB45C6701EC3723900D50CAA /* QuestionExhibition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB45C66F1EC3723900D50CAA /* QuestionExhibition.swift */; };
 		FB66AA0D1EC243780039CF8B /* Yotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66AA0C1EC243780039CF8B /* Yotpo.swift */; };
 		FB7575E91E9D08CC00D1E844 /* yotpoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */; };
 		FB7575EE1E9D08CC00D1E844 /* yotpoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7575ED1E9D08CC00D1E844 /* yotpoKitTests.swift */; };
@@ -88,6 +89,7 @@
 		FB4313131EA50560008A4B37 /* Asker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asker.swift; sourceTree = "<group>"; };
 		FB4313151EA50C67008A4B37 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		FB4313191EA522B0008A4B37 /* BadgeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeObject.swift; sourceTree = "<group>"; };
+		FB45C66F1EC3723900D50CAA /* QuestionExhibition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionExhibition.swift; sourceTree = "<group>"; };
 		FB66AA0C1EC243780039CF8B /* Yotpo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yotpo.swift; sourceTree = "<group>"; };
 		FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = yotpoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7575E21E9D08CC00D1E844 /* yotpoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yotpoKit.h; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				FB4313131EA50560008A4B37 /* Asker.swift */,
 				FB4313191EA522B0008A4B37 /* BadgeObject.swift */,
 				FB4313151EA50C67008A4B37 /* Answer.swift */,
+				FB45C66F1EC3723900D50CAA /* QuestionExhibition.swift */,
 			);
 			name = Question;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				FBA46CB31EA639720060CBC3 /* RequestYotpo.swift in Sources */,
 				FBC9A38B1E9EADBC0053E597 /* BottomLine.swift in Sources */,
 				FB4313161EA50C67008A4B37 /* Answer.swift in Sources */,
+				FB45C6701EC3723900D50CAA /* QuestionExhibition.swift in Sources */,
 				FBA46CB51EA639E70060CBC3 /* APIYotpo.swift in Sources */,
 				FBC9A38F1E9EB1950053E597 /* Pagination.swift in Sources */,
 				FB8DB6631EA4EE0C0006B8BB /* MyQuestion.swift in Sources */,
