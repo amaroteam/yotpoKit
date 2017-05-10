@@ -14,7 +14,7 @@ open class MyQuestion: RequestYotpo {
     //Aliases to custom closures
     public typealias completionWithProductQuestions         = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion?)->Void
     public typealias completionWithQuestions                = (_ code: Int, _ msg: String, _ questions: [Question])->Void
-    public typealias completionWithQuestionsAndExhibition   = (_ code: Int, _ msg: String, _ questions: [Question], _ questionsExhibition:[QuestionExhibition])->Void
+    public typealias completionWithQuestionsAndExhibition   = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion, _ questionsExhibition:[QuestionExhibition])->Void
     public typealias completionDefault                      = (_ code: Int, _ msg: String)->Void
     public typealias completionQuestion                     = (_ code: Int, _ title: String, _ msg:String)->Void
     
@@ -158,11 +158,14 @@ open class MyQuestion: RequestYotpo {
         let myOldProductQuestion = productQuestion.questions.filter { (question) -> Bool in
             return question.id != 0
         }
+        var newProductQuestion = productQuestion
         
         if productQuestion.totalQuestions > myOldProductQuestion.count {
             let currentPage = myOldProductQuestion.count/5
             var questionsExhibition = [QuestionExhibition]()
             getQuestionPerPage(productId: productId, page: currentPage+1, completion: { (code, msg, result) in
+                newProductQuestion.questions += result
+                
                 for question in result {
                     let questExhibition = QuestionExhibition(withQuestion: question)
                     questionsExhibition.append(questExhibition)
@@ -173,10 +176,10 @@ open class MyQuestion: RequestYotpo {
                     }
                 }
                 
-                completion(code, msg, result,questionsExhibition)
+                completion(code, msg, newProductQuestion,questionsExhibition)
             })
         } else {
-            completion(2, "There aren't questions to download", [], [])
+            completion(2, "There aren't questions to download", newProductQuestion, [])
         }
     }
     
