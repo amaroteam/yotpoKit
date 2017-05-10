@@ -12,10 +12,11 @@ import Alamofire
 open class MyQuestion: RequestYotpo {
     
     //Aliases to custom closures
-    public typealias completionWithProductQuestions     = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion?)->Void
-    public typealias completionWithQuestions            = (_ code: Int, _ msg: String, _ questions: [Question])->Void
-    public typealias completionDefault                  = (_ code: Int, _ msg: String)->Void
-    public typealias completionQuestion                 = (_ code: Int, _ title: String, _ msg:String)->Void
+    public typealias completionWithProductQuestions         = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion?)->Void
+    public typealias completionWithQuestions                = (_ code: Int, _ msg: String, _ questions: [Question])->Void
+    public typealias completionWithQuestionsAndExhibition   = (_ code: Int, _ msg: String, _ questions: [Question], _ questionsExhibition:[QuestionExhibition])->Void
+    public typealias completionDefault                      = (_ code: Int, _ msg: String)->Void
+    public typealias completionQuestion                     = (_ code: Int, _ title: String, _ msg:String)->Void
     
     open func getQuestions(productId:String, completion: @escaping completionWithProductQuestions) {
         let endPoint = Endpoint.MyQuestion().getQuestions(productId: productId, appKey: appKey)
@@ -153,19 +154,29 @@ open class MyQuestion: RequestYotpo {
         }
     }
     
-    open func getNextQuestions(productQuestion:ProductQuestion, productId:String, completion: @escaping completionWithQuestions) {
+    open func getNextQuestions(productQuestion:ProductQuestion, productId:String, completion: @escaping completionWithQuestionsAndExhibition) {
         let myOldProductQuestion = productQuestion.questions.filter { (question) -> Bool in
             return question.id != 0
         }
         
         if productQuestion.totalQuestions > myOldProductQuestion.count {
             let currentPage = myOldProductQuestion.count/5
-            
+            var questionsExhibition = [QuestionExhibition]()
             getQuestionPerPage(productId: productId, page: currentPage+1, completion: { (code, msg, result) in
-                completion(code, msg, result)
+                for question in result {
+                    let questExhibition = QuestionExhibition(withQuestion: question)
+                    questionsExhibition.append(questExhibition)
+                    
+                    for answer in question.answers {
+                        let answerExhibition = QuestionExhibition(withAnswer: answer, idQuest: question.id)
+                        questionsExhibition.append(answerExhibition)
+                    }
+                }
+                
+                completion(code, msg, result,questionsExhibition)
             })
         } else {
-            completion(2, "There aren't questions to download", [])
+            completion(2, "There aren't questions to download", [], [])
         }
     }
     
@@ -186,6 +197,5 @@ open class MyQuestion: RequestYotpo {
         
         return questionsExhibition
     }
-
 
 }
