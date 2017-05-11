@@ -154,7 +154,7 @@ open class MyQuestion: RequestYotpo {
         }
     }
     
-    open func getNextQuestions(productQuestion:ProductQuestion, productId:String, completion: @escaping completionWithQuestionsAndExhibition) {
+    open func getNextQuestions(productQuestion:ProductQuestion, oldQuestionsExhibition:[QuestionExhibition], productId:String, completion: @escaping completionWithQuestionsAndExhibition) {
         let myOldProductQuestion = productQuestion.questions.filter { (question) -> Bool in
             return question.id != 0
         }
@@ -168,12 +168,19 @@ open class MyQuestion: RequestYotpo {
                 
                 for question in result {
                     let questExhibition = QuestionExhibition(withQuestion: question)
-                    questionsExhibition.append(questExhibition)
                     
-                    for answer in question.answers {
-                        let answerExhibition = QuestionExhibition(withAnswer: answer, idQuest: question.id)
-                        questionsExhibition.append(answerExhibition)
+                    let isContain = oldQuestionsExhibition.contains(where: { (questionEx) -> Bool in
+                        return questionEx.idQuestion == questExhibition.idQuestion && questionEx.idAnswer == questExhibition.idAnswer && questionEx.typeQuestion == questExhibition.typeQuestion
+                    })
+                    if !isContain {
+                        questionsExhibition.append(questExhibition)
+                        for answer in question.answers {
+                            let answerExhibition = QuestionExhibition(withAnswer: answer, idQuest: question.id)
+                            questionsExhibition.append(answerExhibition)
+                        }
                     }
+                    
+                    
                 }
                 
                 completion(code, msg, newProductQuestion,questionsExhibition)
