@@ -24,7 +24,7 @@ extension Endpoint {
         }
         
         func getReviewsPage(productId:String, appKey:String, perPage:Int, page:Int)->EndPointType {
-            return ("https://api.yotpo.com/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)?page=\(page)", .get)
+            return ("https://api.yotpo.com/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)&page=\(page)", .get)
         }
         
         func getResume(productId:String, appKey:String)->EndPointType {
