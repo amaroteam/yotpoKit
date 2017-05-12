@@ -156,17 +156,43 @@ open class MyReview: RequestYotpo {
         let myOldProductReviews = productReview.reviews.filter { (review) -> Bool in
             return review.id != 0
         }
+        
         var newProductReviews = productReview
         if productReview.bottomLine.totalReview > myOldProductReviews.count {
             let currentPage = myOldProductReviews.count/perPage
             
             getReviewsPage(productId: productId, perPage: perPage, page: currentPage+1, completion: { (code, msg, reviews) in
-                newProductReviews.reviews += reviews
+                let reviewsOrder = self.sortReviews(reviews: reviews)
+                newProductReviews.reviews += reviewsOrder
                 completion(200, msg, newProductReviews)
             })
         } else {
             completion(2, "There aren't reviews to download", newProductReviews)
         }
+    }
+    
+    func sortReviews(reviews:[Review])->[Review] {
+        let myReviewsOrder = reviews.sorted(by: { (review1, review2) -> Bool in
+            
+            if review1.score < review2.score {
+                return false
+            }
+            
+            if review1.score > review2.score {
+                return true
+            }
+            
+            if review1.score == review2.score {
+                
+                return review1.votesUp > review2.votesUp
+                
+            }
+            
+            return false
+            
+        })
+        
+        return myReviewsOrder
     }
     
     
