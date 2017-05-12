@@ -58,7 +58,7 @@ open class Yotpo: RequestYotpo {
     }
  
     
-    open func getProductYotpo(productId:String, _ completion: @escaping completionWithProductYotpo) {
+    open func getProductYotpo(productId:String, perPage:Int = 150, _ completion: @escaping completionWithProductYotpo) {
         var questionProcess = false
         var reviewProcess = false
         var myProductYotpo = ProductYotpo()
@@ -75,8 +75,7 @@ open class Yotpo: RequestYotpo {
             }
 
         }
-        
-        myReview.getReviews(productId: productId) { (code, msg, reviewResult) in
+        myReview.getReviews(productId: productId, perPage: perPage) { (code, msg, reviewResult) in
             messageResult +=  "\nProduct: \(msg)"
             
             reviewProcess = true

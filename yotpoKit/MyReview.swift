@@ -42,7 +42,7 @@ open class MyReview: RequestYotpo {
         }
     }
     
-    open func getReviewsPage(productId:String, perPage:Int = 150,page:Int, completion: @escaping completionWithReviews) {
+    open func getReviewsPage(productId:String, perPage:Int = 150,page:Int, completion: @escaping completionReviews) {
         let endPoint = Endpoint.MyReview().getReviewsPage(productId: productId, appKey: appKey, perPage: perPage, page: page)
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
@@ -53,14 +53,14 @@ open class MyReview: RequestYotpo {
                     let reviewDict = JSON["response"] as? [String: AnyObject],
                     code == 200,
                     message == "OK" else {
-                        completion(getMessage.ParsingError.code, getMessage.ParsingError.msg,nil)
+                        completion(getMessage.ParsingError.code, getMessage.ParsingError.msg,[])
                         return
                 }
                 let productReview = ProductReviews(dic: reviewDict)
-                completion(code, message, productReview)
+                completion(code, message, productReview.reviews)
                 
             case .failure:
-                completion(getMessage.InternetError.code, getMessage.InternetError.msg, nil)
+                completion(getMessage.InternetError.code, getMessage.InternetError.msg, [])
             }
         }
     }
@@ -152,23 +152,19 @@ open class MyReview: RequestYotpo {
     }
     
     
-    open func getNextReview(productReview:ProductReviews, perPage:Int = 150, productId:String, completion: @escaping completionReviews) {
+    open func getNextReview(productReview:ProductReviews, perPage:Int = 150, productId:String, completion: @escaping completionWithReviews) {
         let myOldProductReviews = productReview.reviews.filter { (review) -> Bool in
             return review.id != 0
         }
-        
+        var newProductReviews = productReview
         if productReview.bottomLine.totalReview > myOldProductReviews.count {
             let currentPage = myOldProductReviews.count/perPage
             
-            getReviewsPage(productId: productId, page: currentPage+1, completion: { (code, msg, productReview) in
-                if let prod = productReview {
-                    completion(code, msg, prod.reviews)
-                } else {
-                    completion(code, msg, [])
-                }
+            getReviewsPage(productId: productId, page: currentPage+1, completion: { (code, msg, reviews) in
+                newProductReviews.reviews += reviews
             })
         } else {
-            completion(2, "There aren't reviews to download", [])
+            completion(2, "There aren't reviews to download", newProductReviews)
         }
     }
     
