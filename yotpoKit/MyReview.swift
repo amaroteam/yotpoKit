@@ -160,8 +160,9 @@ open class MyReview: RequestYotpo {
         if productReview.bottomLine.totalReview > myOldProductReviews.count {
             let currentPage = myOldProductReviews.count/perPage
             
-            getReviewsPage(productId: productId, page: currentPage+1, completion: { (code, msg, reviews) in
+            getReviewsPage(productId: productId, perPage: perPage, page: currentPage+1, completion: { (code, msg, reviews) in
                 newProductReviews.reviews += reviews
+                completion(200, msg, newProductReviews)
             })
         } else {
             completion(2, "There aren't reviews to download", newProductReviews)
