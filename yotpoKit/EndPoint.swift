@@ -43,6 +43,14 @@ extension Endpoint {
                 return ("https://api.yotpo.com/reviews/\(reviewId)/vote/down", .get)
             }
         }
+        func removeVoteReview(reviewId:String,vote: VoteType)->EndPointType {
+            switch vote {
+            case .like:
+                return ("https://api.yotpo.com/reviews/\(reviewId)/vote/up/true", .get)
+            case .unlike:
+                return ("https://api.yotpo.com/reviews/\(reviewId)/vote/down/true", .get)
+            }
+        }
     }
 }
 
@@ -69,6 +77,15 @@ extension Endpoint {
                 return ("https://api.yotpo.com/answers/\(questionId)/vote/up", .get)
             case .unlike:
                 return ("https://api.yotpo.com/answers/\(questionId)/vote/down", .get)
+            }
+        }
+        
+        func removeVoteQuestion(questionId:String,vote: VoteType)->EndPointType {
+            switch vote {
+            case .like:
+                return ("https://api.yotpo.com/answers/\(questionId)/vote/up/true", .get)
+            case .unlike:
+                return ("https://api.yotpo.com/answers/\(questionId)/vote/down/true", .get)
             }
         }
     }

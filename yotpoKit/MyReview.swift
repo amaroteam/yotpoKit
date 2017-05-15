@@ -151,6 +151,26 @@ open class MyReview: RequestYotpo {
         }
     }
     
+    open func removeVoteReview(reviewId:String,voteType:VoteType, completion: @escaping completionDefault) {
+        let endPoint = Endpoint.MyReview().removeVoteReview(reviewId: reviewId, vote: voteType)
+        
+        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+            switch response.result {
+            case .success:
+                guard let JSON = response.result.value as? [String: AnyObject],
+                    let code = JSON["status"]?["code"] as? Int,
+                    let message = JSON["status"]?["message"] as? String,
+                    let _ = JSON["response"] as? [String: AnyObject] else {
+                        completion(getMessage.ParsingError.code, getMessage.ParsingError.msg)
+                        return
+                }
+                completion(code, message)
+            case .failure:
+                completion(getMessage.InternetError.code, getMessage.InternetError.msg)
+            }
+        }
+    }
+    
     
     open func getNextReview(productReview:ProductReviews, perPage:Int = 150, productId:String, completion: @escaping completionWithReviews) {
         let myOldProductReviews = productReview.reviews.filter { (review) -> Bool in

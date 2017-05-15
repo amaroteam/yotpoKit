@@ -133,6 +133,26 @@ open class MyQuestion: RequestYotpo {
         }
     }
     
+    open func removeVoteQuestion(questionId:String,voteType:VoteType, completion: @escaping completionDefault) {
+        let endPoint = Endpoint.MyQuestion().removeVoteQuestion(questionId: questionId, vote: voteType)
+        
+        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+            switch response.result {
+            case .success:
+                guard let JSON = response.result.value as? [String: AnyObject],
+                    let code = JSON["status"]?["code"] as? Int,
+                    let message = JSON["status"]?["message"] as? String,
+                    let _ = JSON["response"] as? [String: AnyObject] else {
+                        completion(getMessage.ParsingError.code, getMessage.ParsingError.msg)
+                        return
+                }
+                completion(code, message)
+            case .failure:
+                completion(getMessage.InternetError.code, getMessage.InternetError.msg)
+            }
+        }
+    }
+    
     open func saveQuestion(post:Post, completion: @escaping completionQuestion) {
         let parameter = post.convertToParameterQuestion(appKey: appKey)
         Alamofire.request(Endpoint.MyQuestion.saveQuestion.URI, method: Endpoint.MyQuestion.saveQuestion.method, parameters: parameter).responseJSON { (response) in
