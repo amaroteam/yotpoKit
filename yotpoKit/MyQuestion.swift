@@ -50,7 +50,7 @@ open class MyQuestion: RequestYotpo {
         }
     }
     
-    open func getQuestionPerPage(productId: String, page:Int, completion: @escaping CompletionWithQuestions) {
+    open func getQuestionPerPage(productId: String, page: Int, completion: @escaping CompletionWithQuestions) {
         let endPoint = Endpoint.MyQuestion().getQuestionPage(productId: productId, appKey: appKey, token: tokenId, page: page)
         
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in

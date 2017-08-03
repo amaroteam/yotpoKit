@@ -22,7 +22,8 @@ public struct Post {
 
     public init() {}
     
-    public init(PostReviewWithSku sku: String, productTitle: String, productUrl: String, displayName: String, email: String, postTitle: String, postDescription: String, reviewScore: Int) {
+    public init(PostReviewWithSku sku: String, productTitle: String, productUrl: String, displayName: String, email: String,
+                postTitle: String, postDescription: String, reviewScore: Int) {
         self.sku = sku
         self.productTitle = productTitle
         self.productUrl = productUrl
@@ -33,7 +34,8 @@ public struct Post {
         self.reviewScore = reviewScore
     }
     
-    public init(PostQuestionWithSku sku :String, productTitle: String, productUrl: String, displayName: String, email: String, question: String) {
+    public init(PostQuestionWithSku sku: String, productTitle: String, productUrl: String, 
+                displayName: String, email: String, question: String) {
         self.sku = sku
         self.productTitle = productTitle
         self.productUrl = productUrl
@@ -67,11 +69,9 @@ public struct Post {
             "product_url": self.productUrl,
             "display_name": self.displayName,
             "email": self.email,
-            "review_content": self.reviewContent,
-            ] as [String :Any]
+            "review_content": self.reviewContent] as [String: Any]
         
         return parameter
     }
-    
-    
+  
 }

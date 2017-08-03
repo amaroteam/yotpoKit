@@ -9,6 +9,7 @@
 import Foundation
 
 public struct StarDistribution {
+    // swiftlint:disable identifier_name
     public var s1: Int = 0
     public var s2: Int = 0
     public var s3: Int = 0
@@ -17,7 +18,7 @@ public struct StarDistribution {
     
     public init() {}
     
-    public init(dic:[String:AnyObject]) {
+    public init(dic: [String: AnyObject]) {
         s1 = dic["1"]  as? Int ?? 0
         s2 = dic["2"]  as? Int ?? 0
         s3 = dic["3"]  as? Int ?? 0
@@ -25,5 +26,4 @@ public struct StarDistribution {
         s5 = dic["5"]  as? Int ?? 0
         
     }
-    
 }

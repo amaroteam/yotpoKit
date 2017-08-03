@@ -31,7 +31,6 @@ public struct Asker {
         badges = createBadges(fromArray: dic["badges"] as? [[String: AnyObject]] ?? [])
     }
     
-    
     internal func createBadges(fromArray array: [[String: AnyObject]]) -> [BadgeObject] {
         var myBadges: [BadgeObject] = []
         myBadges = array.map({ (badgeDict) in

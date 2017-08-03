@@ -16,15 +16,15 @@ public struct ProductQuestion {
     
     public init() {}
     
-    public init(dic:[String:AnyObject]) {
+    public init(dic: [String: AnyObject]) {
         totalQuestions = dic["total_questions"]    as? Int ?? 0
         totalAnswers = dic["total_answers"]      as? Int ?? 0
-        questions = createQuestion(fromArray: dic["questions"] as? [[String : AnyObject]] ?? [])
+        questions = createQuestion(fromArray: dic["questions"] as? [[String: AnyObject]] ?? [])
     }
     
     public init(resumeDic: [String: AnyObject]) {
-        totalQuestions  = resumeDic["total_questions"]    as? Int ?? 0
-        totalAnswers    = resumeDic["total_answers"]      as? Int ?? 0
+        totalQuestions = resumeDic["total_questions"]    as? Int ?? 0
+        totalAnswers = resumeDic["total_answers"]      as? Int ?? 0
     }
 
     internal func createQuestion(fromArray array: [[String: AnyObject]]) -> [Question] {

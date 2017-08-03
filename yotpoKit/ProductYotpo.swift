@@ -19,8 +19,4 @@ public struct ProductYotpo {
         productQuestion = questions
         productReviews = reviews
     }
-    
-
-    
-
 }

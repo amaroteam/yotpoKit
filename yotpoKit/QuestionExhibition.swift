@@ -25,7 +25,6 @@ public struct QuestionExhibition {
     public var isOpen: Bool = false
     public var isHiddenText: Bool = false
     
-   
     public init(withQuestion question: Question) {
         idQuestion = question.id
         idAnswer = 0

@@ -29,7 +29,7 @@ public struct ProductReviews {
     }
     
     internal func createReview(fromArray array: [[String: AnyObject]]) -> [Review] {
-        var myReviews:[Review] = []
+        var myReviews: [Review] = []
         myReviews = array.map({ (reviwDict) in
             return Review(dic: reviwDict)
         })
@@ -38,7 +38,7 @@ public struct ProductReviews {
     }
     
     internal func createProduct(fromArray array: [[String: AnyObject]]) -> [ProductDetailReview] {
-        var myProducts:[ProductDetailReview] = []
+        var myProducts: [ProductDetailReview] = []
         myProducts = array.map({ (prodDict) in
             return ProductDetailReview(dic: prodDict)
         })
