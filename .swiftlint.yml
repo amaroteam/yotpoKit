@@ -1,0 +1,15 @@
+line_length: 160
+excluded:
+- Carthage
+- Alamofire
+- Frameworks
+- yotpoKitTests/
+- yotpoUsageExampleTests/
+- yotpoUsageExampleUITests/
+
+disabled_rules:
+  - trailing_whitespace
+
+identifier_name:
+  excluded:
+    - id
