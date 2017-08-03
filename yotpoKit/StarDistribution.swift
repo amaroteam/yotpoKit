@@ -24,6 +24,5 @@ public struct StarDistribution {
         s3 = dic["3"]  as? Int ?? 0
         s4 = dic["4"]  as? Int ?? 0
         s5 = dic["5"]  as? Int ?? 0
-        
     }
 }
