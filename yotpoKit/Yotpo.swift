@@ -11,14 +11,12 @@ import Alamofire
 
 open class Yotpo: RequestYotpo {
     
-    open var myQuestion:MyQuestion
-    open var myReview:MyReview
+    open var myQuestion: MyQuestion
+    open var myReview: MyReview
     
     //Aliases to custom closures
-    public typealias completionWithToken = (_ code: Int, _ msg: String, _ token: String?)->Void
-    public typealias completionWithProductYotpo = (_ code: Int, _ msg: String, _ productYotpo: ProductYotpo)->Void
-    public typealias completionWithReviews      = (_ code: Int, _ msg: String, _ productReviews: ProductReviews?)->Void
-    public typealias completionWithQuestions    = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion?)->Void
+    public typealias CompletionWithToken = (_ code: Int, _ msg: String, _ token: String?) -> Void
+    public typealias CompletionWithProductYotpo = (_ code: Int, _ msg: String, _ productYotpo: ProductYotpo) -> Void
     
     override init(appK: String, clientS: String, token: String = "") {
         myQuestion = MyQuestion(appK: appK, clientS: clientS, token: "")
@@ -26,16 +24,16 @@ open class Yotpo: RequestYotpo {
         super.init(appK: appK, clientS: clientS, token: token)
     }
     
-    fileprivate func initQuestion(token:String) {
+    fileprivate func initQuestion(token: String) {
         self.myQuestion = MyQuestion(appK: appKey, clientS: clientSecret, token: token)
         self.myReview = MyReview(appK: appKey, clientS: clientSecret, token: token)
     }
     
     open func requestToken() {
         let parameter = [
-            "client_id"     :appKey,
-            "client_secret" : clientSecret,
-            "grant_type"    : "client_credentials"
+            "client_id": appKey,
+            "client_secret": clientSecret,
+            "grant_type": "client_credentials"
         ]
         
         Alamofire.request(Endpoint.Yotpo.authentication.URI, method: Endpoint.Yotpo.authentication.method, parameters: parameter).responseJSON { (response) in
@@ -57,8 +55,7 @@ open class Yotpo: RequestYotpo {
         
     }
  
-    
-    open func getProductYotpo(productId:String, perPage:Int = 150, _ completion: @escaping completionWithProductYotpo) {
+    open func getProductYotpo(productId: String, perPage: Int = 150, _ completion: @escaping CompletionWithProductYotpo) {
         var questionProcess = false
         var reviewProcess = false
         var myProductYotpo = ProductYotpo()
@@ -87,6 +84,4 @@ open class Yotpo: RequestYotpo {
             }
         }
     }
-
-    
 }
