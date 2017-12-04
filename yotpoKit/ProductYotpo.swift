@@ -10,17 +10,13 @@ import Foundation
 
 public struct ProductYotpo {
     
-    public var productQuestion : ProductQuestion = ProductQuestion()
-    public var productReviews  : ProductReviews  = ProductReviews()
+    public var productQuestion: ProductQuestion = ProductQuestion()
+    public var productReviews: ProductReviews  = ProductReviews()
     
-    public init(){}
+    public init() {}
     
-    public init(reviews:ProductReviews,questions:ProductQuestion) {
+    public init(reviews: ProductReviews, questions: ProductQuestion) {
         productQuestion = questions
-        productReviews  = reviews
+        productReviews = reviews
     }
-    
-
-    
-
 }

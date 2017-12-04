@@ -12,9 +12,9 @@ import Foundation
 open class APIYotpo {
     
     fileprivate let appKey: String
-    fileprivate let clientSecret:String
+    fileprivate let clientSecret: String
     
-    public init(appK:String, clientS:String) {
+    public init(appK: String, clientS: String) {
         appKey = appK
         clientSecret = clientS
     }
