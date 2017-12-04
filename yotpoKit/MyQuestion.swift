@@ -14,10 +14,9 @@ open class MyQuestion: RequestYotpo {
     //Aliases to custom closures
     public typealias CompletionWithProductQuestions = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion?) -> Void
     public typealias CompletionWithQuestions = (_ code: Int, _ msg: String, _ questions: [Question]) -> Void
-    public typealias CompletionWithQuestionsAndExhibition = (_ code: Int, _ msg: String,
-        _ productQuestion: ProductQuestion, _ questionsExhibition: [QuestionExhibition]) -> Void
     public typealias CompletionDefault = (_ code: Int, _ msg: String) -> Void
     public typealias CompletionQuestion = (_ code: Int, _ title: String, _ msg: String) -> Void
+    public typealias CompleteNextPageQuestions = (_ msg: String, _ newQuestions: [Question], _ productQuestio: ProductQuestion) -> Void
     
     open func getQuestions(productId: String, completion: @escaping CompletionWithProductQuestions) {
         let endPoint = Endpoint.MyQuestion().getQuestions(productId: productId, appKey: appKey)
@@ -25,25 +24,19 @@ open class MyQuestion: RequestYotpo {
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
             case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
-                    let code = JSON["status"]?["code"] as? Int,
-                    let message = JSON["status"]?["message"] as? String else {
+                guard let JSON = response.result.value as? [String: AnyObject] else {
                         completion(GetMessage.ParsingError.code, GetMessage.ParsingError.msg, nil)
                         return
                 }
                 
-                if code == 200 {
-                    guard let questionDict = JSON["response"] as? [String: AnyObject] else {
-                        completion(GetMessage.ParsingError.code, GetMessage.ParsingError.msg, nil)
-                        return
-                    }
-                    
-                    let productQ = ProductQuestion(dic: questionDict)
-                    completion(code, message, productQ)
- 
-                } else {
-                    completion(code, message, nil)
+                guard let questionDict = JSON["response"] as? [String: AnyObject] else {
+                    completion(GetMessage.ParsingError.code, GetMessage.ParsingError.msg, nil)
+                    return
                 }
+                
+                let productQ = ProductQuestion(dic: questionDict)
+                completion(0, "OK", productQ)
+
             case .failure:
                 completion(GetMessage.InternetError.code, GetMessage.InternetError.msg, nil)
             }
@@ -57,24 +50,19 @@ open class MyQuestion: RequestYotpo {
             switch response.result {
             case .success:
                 guard let JSON = response.result.value as? [String: AnyObject],
-                    let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String else {
                         completion(GetMessage.ParsingError.code, GetMessage.ParsingError.msg, [])
                         return
                 }
-                
-                if code == 200 {
-                    guard let questionDict = JSON["response"] as? [String: AnyObject] else {
-                        completion(GetMessage.ParsingError.code, GetMessage.ParsingError.msg, [])
-                        return
-                    }
-                    
-                    let productQ = ProductQuestion(dic: questionDict)
-                    completion(code, message, productQ.questions)
-                    
-                } else {
-                    completion(code, message, [])
+
+                guard let questionDict = JSON["response"] as? [String: AnyObject] else {
+                    completion(GetMessage.ParsingError.code, GetMessage.ParsingError.msg, [])
+                    return
                 }
+                
+                let productQ = ProductQuestion(dic: questionDict)
+                completion(200, message, productQ.questions)
+
             case .failure:
                 completion(GetMessage.InternetError.code, GetMessage.InternetError.msg, [])
             }
@@ -175,41 +163,25 @@ open class MyQuestion: RequestYotpo {
             
         }
     }
-    
-    open func getNextQuestions(productQuestion: ProductQuestion, 
-                               oldQuestionsExhibition: [QuestionExhibition], productId: String,
-                               completion: @escaping CompletionWithQuestionsAndExhibition) {
-        let myOldProductQuestion = productQuestion.questions.filter { (question) -> Bool in
+        
+    open func getNextQuestion(currentQuestion: ProductQuestion, productId: String, completion: @escaping CompleteNextPageQuestions) {
+        let questions = currentQuestion.questions.filter { (question) -> Bool in
             return question.id != 0
         }
-        var newProductQuestion = productQuestion
         
-        if productQuestion.totalQuestions > myOldProductQuestion.count {
-            let currentPage = myOldProductQuestion.count/5
-            var questionsExhibition = [QuestionExhibition]()
-            getQuestionPerPage(productId: productId, page: currentPage+1, completion: { (code, msg, result) in
-                newProductQuestion.questions += result
+        var newProductQuestion = currentQuestion
+        
+        if currentQuestion.totalQuestions > questions.count {
+            let currentPage = questions.count/5
+            
+            getQuestionPerPage(productId: productId, page: currentPage+1, completion: { (_, _, newQuestions) in
                 
-                for question in result {
-                    let questExhibition = QuestionExhibition(withQuestion: question)
-                    
-                    let isContain = oldQuestionsExhibition.contains(where: { (questionEx) -> Bool in
-                        return questionEx.idQuestion == questExhibition.idQuestion && questionEx.idAnswer == questExhibition.idAnswer &&
-                            questionEx.typeQuestion == questExhibition.typeQuestion
-                    })
-                    if !isContain {
-                        questionsExhibition.append(questExhibition)
-                        for answer in question.answers {
-                            let answerExhibition = QuestionExhibition(withAnswer: answer, idQuest: question.id)
-                            questionsExhibition.append(answerExhibition)
-                        }
-                    }
-                }
+                newProductQuestion.questions += newQuestions
                 
-                completion(code, msg, newProductQuestion, questionsExhibition)
+                completion("Sucess", newQuestions, newProductQuestion)
             })
         } else {
-            completion(2, "There aren't questions to download", newProductQuestion, [])
+            completion("There aren't questions to download", [], currentQuestion)
         }
     }
 
