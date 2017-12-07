@@ -36,3 +36,20 @@ public struct ProductQuestion {
         return myQuestions
     }
 }
+
+public extension Sequence where Iterator.Element == Question {
+    public func convertQuestionToQuestionFormatter() -> [QuestionExhibition] {
+        var myQuestionFormatter: [QuestionExhibition] = []
+        
+        for selectQuestion in self {
+            let questExhibition = QuestionExhibition(withQuestion: selectQuestion)
+            myQuestionFormatter.append(questExhibition)
+            
+            for answer in selectQuestion.answers {
+                let answerExhibition = QuestionExhibition(withAnswer: answer, idQuest: selectQuestion.id)
+                myQuestionFormatter.append(answerExhibition)
+            }
+        }
+        return myQuestionFormatter
+    }
+}
