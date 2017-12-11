@@ -17,6 +17,7 @@ open class MyQuestion: RequestYotpo {
     public typealias CompletionDefault = (_ code: Int, _ msg: String) -> Void
     public typealias CompletionQuestion = (_ code: Int, _ title: String, _ msg: String) -> Void
     public typealias CompleteNextPageQuestions = (_ msg: String, _ newQuestions: [Question], _ productQuestio: ProductQuestion) -> Void
+    public typealias CompletionWithQuestionsAndExhibition = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion, _ questionsExhibition: [QuestionExhibition]) -> Void
     
     open func getQuestions(productId: String, completion: @escaping CompletionWithProductQuestions) {
         let endPoint = Endpoint.MyQuestion().getQuestions(productId: productId, appKey: appKey)
@@ -182,6 +183,43 @@ open class MyQuestion: RequestYotpo {
             })
         } else {
             completion("There aren't questions to download", [], currentQuestion)
+        }
+    }
+    
+    open func getNextQuestionsWithExhibition(productQuestion: ProductQuestion, oldQuestionsExhibition: [QuestionExhibition],
+                                             productId: String, completion: @escaping CompletionWithQuestionsAndExhibition) {
+        let myOldProductQuestion = productQuestion.questions.filter { (question) -> Bool in
+            return question.id != 0
+        }
+        var newProductQuestion = productQuestion
+        
+        if productQuestion.totalQuestions > myOldProductQuestion.count {
+            let currentPage = myOldProductQuestion.count/5
+            var questionsExhibition = [QuestionExhibition]()
+            getQuestionPerPage(productId: productId, page: currentPage+1, completion: { (code, msg, result) in
+                newProductQuestion.questions += result
+                
+                for question in result {
+                    let questExhibition = QuestionExhibition(withQuestion: question)
+                    
+                    let isContain = oldQuestionsExhibition.contains(where: { (questionEx) -> Bool in
+                        return questionEx.idQuestion == questExhibition.idQuestion &&
+                            questionEx.idAnswer == questExhibition.idAnswer &&
+                            questionEx.typeQuestion == questExhibition.typeQuestion
+                    })
+                    if !isContain {
+                        questionsExhibition.append(questExhibition)
+                        for answer in question.answers {
+                            let answerExhibition = QuestionExhibition(withAnswer: answer, idQuest: question.id)
+                            questionsExhibition.append(answerExhibition)
+                        }
+                    }
+                }
+                
+                completion(code, msg, newProductQuestion, questionsExhibition)
+            })
+        } else {
+            completion(2, "There aren't questions to download", newProductQuestion, [])
         }
     }
 
