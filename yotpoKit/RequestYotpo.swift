@@ -7,7 +7,18 @@
 //
 
 import Foundation
+
 open class RequestYotpo {
+    
+    public struct Filters {
+        let sort: String?
+        let direction: String?
+        
+        public init(sort: String, direction: String){
+            self.sort = sort
+            self.direction = direction
+        }
+    }
     
     //Generic typealias for completions
     public typealias CompletionWithServerResponse = (_ code: Int, _ msg: String) -> Void
