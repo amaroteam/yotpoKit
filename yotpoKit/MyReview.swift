@@ -18,8 +18,8 @@ open class MyReview: RequestYotpo {
     public typealias CompletionReviews = (_ code: Int, _ msg: String, _ reviews: [Review]) -> Void
     public typealias CompletionDefault = (_ code: Int, _ msg: String) -> Void
     
-    open func getReviews(productId: String, perPage: Int = 150, completion: @escaping CompletionWithReviews) {
-        let endPoint = Endpoint.MyReview().getReviews(productId: productId, appKey: appKey, perPage: perPage)
+    open func getReviews(productId: String, perPage: Int = 150, sort: String = "Desc", completion: @escaping CompletionWithReviews) {
+        let endPoint = Endpoint.MyReview().getReviews(productId: productId, appKey: appKey, perPage: perPage, sort: sort)
         Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
             case .success:

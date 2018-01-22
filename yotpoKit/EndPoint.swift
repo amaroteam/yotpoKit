@@ -19,8 +19,16 @@ extension Endpoint {
     struct MyReview {
         static let saveReview: EndPointType = ("https://api.yotpo.com/v1/widget/reviews", .post)
         
-        func getReviews(productId: String, appKey: String, perPage: Int) -> EndPointType {
-            return ("https://api.yotpo.com/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)", .get)
+        /**
+         - Parameters:
+            - productId: The product identification
+            - appKey: The app key from yotpo
+            - perPage: How many results per page
+            - sort: Sort order: Asc or Desc
+         */
+        func getReviews(productId: String, appKey: String, perPage: Int, sort: String) -> EndPointType {
+            let sort = "sort=date&direction=\(sort)"
+            return ("https://api.yotpo.com/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)&\(sort)", .get)
         }
         
         func getReviewsPage(productId: String, appKey: String, perPage: Int, page: Int) -> EndPointType {
