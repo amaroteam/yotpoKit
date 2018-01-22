@@ -51,7 +51,7 @@ public struct Review {
         user = createUser(dic: dic["user"] as? [String: AnyObject] ?? [:])
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-ddEHH:mm:ssz"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         if let dateString = dic["created_at"] as? String,
             let daten = dateFormatter.date(from: dateString) {
             self.createdAt = daten
