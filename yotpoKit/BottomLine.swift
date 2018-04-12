@@ -12,7 +12,7 @@ public struct BottomLine {
     
     public var customFieldsBottomline: String = ""
     public var totalReview: Int = 0
-    public var averageScore: Float = 0.0
+    public var averageScore: Double = 0.0
     public var starDistribution: StarDistribution = StarDistribution()
     
     public init() {}
@@ -23,7 +23,8 @@ public struct BottomLine {
         if totalReview == 0 {
             totalReview = dic["total_reviews"] as? Int ?? 0
         }
-        averageScore = dic["average_score"] as? Float ?? 0.0
+        averageScore = dic["average_score"] as? Double ?? 0.0
+        
         starDistribution = createStarDistribution(dic: dic["star_distribution"] as? [String: AnyObject] ?? [:])
     }
     
