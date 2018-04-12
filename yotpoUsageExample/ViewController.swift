@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = APIYotpo(appK: "appKey", clientS: "clientSecret").yotpo
+
     }
     
     override func didReceiveMemoryWarning() {

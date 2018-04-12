@@ -32,7 +32,7 @@ extension Endpoint {
             if let sort = filters?.sort, !sort.isEmpty {
                 url.append("&sort=\(sort)")
             }
-            if let direction = filters?.direction, !direction.isEmpty{
+            if let direction = filters?.direction, !direction.isEmpty {
                 url.append("&direction=\(direction)")
             }
             return (url, .get)
