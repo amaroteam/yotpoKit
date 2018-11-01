@@ -14,7 +14,7 @@ open class RequestYotpo {
         let sort: String?
         let direction: String?
         
-        public init(sort: String, direction: String){
+        public init(sort: String, direction: String) {
             self.sort = sort
             self.direction = direction
         }
@@ -41,4 +41,21 @@ extension RequestYotpo {
         static let SuccessQuestion = (code: 0, title: "OBRIGADO POR POSTAR SUA PERGUNTA!", 
                                       msg:"Por favor acesse o link do e-mail de confirmação. \nA sua pergunta aparecerá no site após alguém responde-la.")
     }
+}
+
+enum FittingTag: String {
+    case clothes = "--11983"
+    case shoes = "--12075"
+}
+
+enum FittingClothesToolTip: String {
+    case veryTight = "Mais Justa"
+    case perfect = "Perfeita"
+    case veryLoose = "Mais Solta"
+}
+
+enum FittingShoesToolTip: String {
+    case veryTight = "Mais Justo"
+    case perfect = "Perfeito"
+    case veryLoose = "Mais Folgado"
 }

@@ -22,6 +22,9 @@ public struct Review {
     public var votesDown: Int = 0
     public var verifiedBuyer: Bool = false
     public var user: UserReview = UserReview()
+    public var isFittingScoreAvailable: Bool = false
+    public var fittingScore: Double = 0.0
+    public var fittingTitle: String = ""
     
     public init() {}
     
@@ -56,6 +59,25 @@ public struct Review {
             let daten = dateFormatter.date(from: dateString) {
             self.createdAt = daten
         }
+        
+        if let dict = dic["custom_fields"] as? [String: AnyObject] {
+            if let fittingDict = dict[FittingTag.clothes.rawValue] as? [String: AnyObject] {
+                fillUpFitting(fittingDict)
+            }
+            
+            if let fittingDict = dict[FittingTag.shoes.rawValue] as? [String: AnyObject] {
+                fillUpFitting(fittingDict)
+            }
+            
+        } else {
+            isFittingScoreAvailable = false
+        }
+    }
+    
+    private mutating func fillUpFitting(_ dict: [String: AnyObject]) {
+        isFittingScoreAvailable = true
+        fittingScore = dict["value"] as? Double ?? 0.0
+        fittingTitle = dict["title"] as? String ?? ""
     }
     
     internal func createUser(dic: [String: AnyObject]) -> UserReview {
