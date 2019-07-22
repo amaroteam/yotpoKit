@@ -22,7 +22,7 @@ class yotpoUsageExampleTests: XCTestCase {
         // Remember to enter official appKey and secretKey before testing
         let appKey = ""
         let secretKey = ""
-        yotpo = APIYotpo(appK: appKey, clientS: secretKey).yotpo
+        yotpo = APIYotpo(env: .dev, appK: appKey, clientS: secretKey).yotpo
     }
     
     override func tearDown() {

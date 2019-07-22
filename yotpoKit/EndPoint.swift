@@ -16,8 +16,20 @@ struct Endpoint {
 
 //All Endpoint MyReview
 extension Endpoint {
+    
+    static var baseUrl: String {
+        get {
+            switch APIYotpo.environment {
+            case .dev:
+                return "https://developers.yotpo.com"
+            default:
+                return "https://api.yotpo.com"
+            }
+        }
+    }
+    
     struct MyReview {
-        static let saveReview: EndPointType = ("https://api.yotpo.com/v1/widget/reviews", .post)
+        static let saveReview: EndPointType = ("\(baseUrl)/v1/widget/reviews", .post)
         
         /**
          - Parameters:
@@ -27,7 +39,7 @@ extension Endpoint {
             - filter: Include filters "sort" and "direction" from Yotpo documentation
          */
         func getReviews(productId: String, appKey: String, perPage: Int, filters: RequestYotpo.Filters? = nil) -> EndPointType {
-            var url = "https://api.yotpo.com/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)"
+            var url = "\(baseUrl)/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)"
             
             if let sort = filters?.sort, !sort.isEmpty {
                 url.append("&sort=\(sort)")
@@ -39,31 +51,31 @@ extension Endpoint {
         }
         
         func getReviewsPage(productId: String, appKey: String, perPage: Int, page: Int) -> EndPointType {
-            return ("https://api.yotpo.com/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)&page=\(page)", .get)
+            return ("\(baseUrl)/v1/widget/\(appKey)/products/\(productId)/reviews.json?per_page=\(perPage)&page=\(page)", .get)
         }
         
         func getResume(productId: String, appKey: String) -> EndPointType {
-            return ("https://api.yotpo.com/products/\(appKey)/\(productId)/bottomline", .get)
+            return ("\(baseUrl)/products/\(appKey)/\(productId)/bottomline", .get)
         }
         
         func getReview(reviewId: String) -> EndPointType {
-            return ("https://api.yotpo.com/reviews/\(reviewId)", .get)
+            return ("\(baseUrl)/reviews/\(reviewId)", .get)
         }
         
         func saveVote(reviewId: String, vote: VoteType) -> EndPointType {
             switch vote {
             case .like:
-                return ("https://api.yotpo.com/reviews/\(reviewId)/vote/up", .get)
+                return ("\(baseUrl)/reviews/\(reviewId)/vote/up", .get)
             case .unlike:
-                return ("https://api.yotpo.com/reviews/\(reviewId)/vote/down", .get)
+                return ("\(baseUrl)/reviews/\(reviewId)/vote/down", .get)
             }
         }
         func removeVoteReview(reviewId: String, vote: VoteType) -> EndPointType {
             switch vote {
             case .like:
-                return ("https://api.yotpo.com/reviews/\(reviewId)/vote/up/true", .get)
+                return ("\(baseUrl)/reviews/\(reviewId)/vote/up/true", .get)
             case .unlike:
-                return ("https://api.yotpo.com/reviews/\(reviewId)/vote/down/true", .get)
+                return ("\(baseUrl)/reviews/\(reviewId)/vote/down/true", .get)
             }
         }
     }
@@ -72,35 +84,35 @@ extension Endpoint {
 //All Endpoint MyQuestion
 extension Endpoint {
     struct MyQuestion {
-        static let saveQuestion: EndPointType = ("https://api.yotpo.com/questions/send_confirmation_mail", .post)
+        static let saveQuestion: EndPointType = ("\(baseUrl)/questions/send_confirmation_mail", .post)
         
         func getQuestions(productId: String, appKey: String) -> EndPointType {
-            return ("https://api.yotpo.com/products/\(appKey)/\(productId)/questions", .get)
+            return ("\(baseUrl)/products/\(appKey)/\(productId)/questions", .get)
         }
         
         func getQuestionPage(productId: String, appKey: String, token: String, page: Int) -> EndPointType {
-            return ("https://api.yotpo.com/products/\(appKey)/\(productId)/questions?utoken=\(token)&page=\(page)", .get)
+            return ("\(baseUrl)/products/\(appKey)/\(productId)/questions?utoken=\(token)&page=\(page)", .get)
         }
         
         func getQuestionResume(productId: String, appKey: String) -> EndPointType {
-            return ("https://api.yotpo.com/products/\(appKey)/\(productId)/qna_bottomline", .get)
+            return ("\(baseUrl)/products/\(appKey)/\(productId)/qna_bottomline", .get)
         }
         
         func saveVoteQuestion(questionId: String, vote: VoteType) -> EndPointType {
             switch vote {
             case .like:
-                return ("https://api.yotpo.com/answers/\(questionId)/vote/up", .get)
+                return ("\(baseUrl)/answers/\(questionId)/vote/up", .get)
             case .unlike:
-                return ("https://api.yotpo.com/answers/\(questionId)/vote/down", .get)
+                return ("\(baseUrl)/answers/\(questionId)/vote/down", .get)
             }
         }
         
         func removeVoteQuestion(questionId: String, vote: VoteType) -> EndPointType {
             switch vote {
             case .like:
-                return ("https://api.yotpo.com/answers/\(questionId)/vote/up/true", .get)
+                return ("\(baseUrl)/answers/\(questionId)/vote/up/true", .get)
             case .unlike:
-                return ("https://api.yotpo.com/answers/\(questionId)/vote/down/true", .get)
+                return ("\(baseUrl)/answers/\(questionId)/vote/down/true", .get)
             }
         }
     }
@@ -109,7 +121,7 @@ extension Endpoint {
 //All Endpoint Yotpo
 extension Endpoint {
     struct Yotpo {
-        static let authentication: EndPointType = ("https://api.yotpo.com/oauth/token", .post)
+        static let authentication: EndPointType = ("\(baseUrl)/oauth/token", .post)
     }
 }
 

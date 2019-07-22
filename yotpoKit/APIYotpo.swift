@@ -13,8 +13,10 @@ open class APIYotpo {
     
     fileprivate let appKey: String
     fileprivate let clientSecret: String
+    public static var environment: Environment = .prod
     
-    public init(appK: String, clientS: String) {
+    public init(env: Environment, appK: String, clientS: String) {
+        APIYotpo.environment = env
         appKey = appK
         clientSecret = clientS
     }

@@ -36,7 +36,7 @@ class yotpoKitTests: XCTestCase {
     
     func testGetReviews() {
         let myReview =  MyReview(appK: "", clientS: "")
-        myReview.getReviews(product_id: "20006723") { (code, msg, reviws) in
+        myReview.getReviews(productId: "20006723") { (code, msg, reviws) in
             print(reviws)
         }
     }
