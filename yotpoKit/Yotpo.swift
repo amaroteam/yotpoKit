@@ -36,11 +36,11 @@ open class Yotpo: RequestYotpo {
             "grant_type": "client_credentials"
         ]
         
-        Alamofire.request(Endpoint.Yotpo.authentication.URI, method: Endpoint.Yotpo.authentication.method, parameters: parameter).responseJSON { (response) in
+        AF.request(Endpoint.Yotpo.authentication.URI, method: Endpoint.Yotpo.authentication.method, parameters: parameter).responseJSON { (response) in
             switch response.result {
-            case .success:
-                
-                guard let JSON = response.result.value as? [String: AnyObject] else {
+            case .success(let data):
+
+                guard let JSON = data as? [String: AnyObject] else {
                     return
                 }
                 

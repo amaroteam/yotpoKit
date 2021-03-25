@@ -38,7 +38,7 @@ public struct ProductQuestion {
 }
 
 public extension Sequence where Iterator.Element == Question {
-    public func convertQuestionToQuestionFormatter() -> [QuestionExhibition] {
+    func convertQuestionToQuestionFormatter() -> [QuestionExhibition] {
         var myQuestionFormatter: [QuestionExhibition] = []
         
         for selectQuestion in self {
