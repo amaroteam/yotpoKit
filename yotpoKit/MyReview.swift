@@ -20,10 +20,10 @@ open class MyReview: RequestYotpo {
     
     open func getReviews(productId: String, perPage: Int = 150, filters: Filters? = nil, completion: @escaping CompletionWithReviews) {
         let endPoint = Endpoint.MyReview().getReviews(productId: productId, appKey: appKey, perPage: perPage, filters: filters)
-        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+        AF.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String,
                     let reviewDict = JSON["response"] as? [String: AnyObject],
@@ -43,10 +43,10 @@ open class MyReview: RequestYotpo {
     
     open func getReviewsPage(productId: String, perPage: Int = 150, page: Int, completion: @escaping CompletionReviews) {
         let endPoint = Endpoint.MyReview().getReviewsPage(productId: productId, appKey: appKey, perPage: perPage, page: page)
-        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+        AF.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String,
                     let reviewDict = JSON["response"] as? [String: AnyObject],
@@ -66,10 +66,10 @@ open class MyReview: RequestYotpo {
     
     open func getResumeReview(productId: String, completion: @escaping CompletionBottomLine) {
         let endPonint = Endpoint.MyReview().getResume(productId: productId, appKey: appKey)
-        Alamofire.request(endPonint.URI, method: endPonint.method).responseJSON { (response) in
+        AF.request(endPonint.URI, method: endPonint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String,
                     let resumeDict = JSON["response"]?["bottomline"] as? [String: AnyObject],
@@ -88,10 +88,10 @@ open class MyReview: RequestYotpo {
     
     open func saveVoteReview(reviewId: String, voteType: VoteType, completion: @escaping CompletionDefault) {
         let endPoint = Endpoint.MyReview().saveVote(reviewId: reviewId, vote: voteType)
-        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+        AF.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String,
                     JSON["response"] as? [String: AnyObject]  != nil else {
@@ -108,10 +108,10 @@ open class MyReview: RequestYotpo {
     
     open func getReview(withReviewId reviewId: String, completion: @escaping CompletionReview) {
         let endPoint = Endpoint.MyReview().getReview(reviewId: reviewId)
-        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+        AF.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String,
                     let reviewDict = JSON["response"]?["review"] as? [String: AnyObject] else {
@@ -131,10 +131,10 @@ open class MyReview: RequestYotpo {
     open func saveReview(post: Post, completion: @escaping CompletionDefault) {
         let parameter = post.convertToParameterReview(appKey: appKey)
         
-        Alamofire.request(Endpoint.MyReview.saveReview.URI, method: Endpoint.MyReview.saveReview.method, parameters: parameter).responseJSON { (response) in
+        AF.request(Endpoint.MyReview.saveReview.URI, method: Endpoint.MyReview.saveReview.method, parameters: parameter).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["code"] as? Int,
                     let message = JSON["message"] as? String,
                     code == 200  else {
@@ -152,10 +152,10 @@ open class MyReview: RequestYotpo {
     open func removeVoteReview(reviewId: String, voteType: VoteType, completion: @escaping CompletionDefault) {
         let endPoint = Endpoint.MyReview().removeVoteReview(reviewId: reviewId, vote: voteType)
         
-        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+        AF.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String,
                     JSON["response"] as? [String: AnyObject] != nil else {

@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 public struct BadgeObject {
     public var id: Int = 0
     public var name: String = ""

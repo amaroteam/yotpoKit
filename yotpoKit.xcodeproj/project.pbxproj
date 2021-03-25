@@ -14,8 +14,6 @@
 		FB43131A1EA522B0008A4B37 /* BadgeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313191EA522B0008A4B37 /* BadgeObject.swift */; };
 		FB45C6701EC3723900D50CAA /* QuestionExhibition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB45C66F1EC3723900D50CAA /* QuestionExhibition.swift */; };
 		FB66AA0D1EC243780039CF8B /* Yotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66AA0C1EC243780039CF8B /* Yotpo.swift */; };
-		FB7575E91E9D08CC00D1E844 /* yotpoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */; };
-		FB7575EE1E9D08CC00D1E844 /* yotpoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7575ED1E9D08CC00D1E844 /* yotpoKitTests.swift */; };
 		FB7575F01E9D08CC00D1E844 /* yotpoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7575E21E9D08CC00D1E844 /* yotpoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB83BD6E1E9D229700FE4971 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB83BD6D1E9D229700FE4971 /* Alamofire.framework */; };
 		FB83BD731E9D22C300FE4971 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD721E9D22C300FE4971 /* Review.swift */; };
@@ -45,13 +43,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FB7575EA1E9D08CC00D1E844 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB7575D61E9D08CC00D1E844 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB7575DE1E9D08CC00D1E844;
-			remoteInfo = yotpoKit;
-		};
 		FB92FBA91E9E646A00D9B127 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FB7575D61E9D08CC00D1E844 /* Project object */;
@@ -86,9 +77,6 @@
 		FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = yotpoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7575E21E9D08CC00D1E844 /* yotpoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yotpoKit.h; sourceTree = "<group>"; };
 		FB7575E31E9D08CC00D1E844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB7575E81E9D08CC00D1E844 /* yotpoKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yotpoKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB7575ED1E9D08CC00D1E844 /* yotpoKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yotpoKitTests.swift; sourceTree = "<group>"; };
-		FB7575EF1E9D08CC00D1E844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB83BD6D1E9D229700FE4971 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FB83BD701E9D22A400FE4971 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FB83BD721E9D22C300FE4971 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Review.swift; path = ../Review.swift; sourceTree = "<group>"; };
@@ -124,14 +112,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB83BD6E1E9D229700FE4971 /* Alamofire.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB7575E51E9D08CC00D1E844 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB7575E91E9D08CC00D1E844 /* yotpoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				FB7575E11E9D08CC00D1E844 /* yotpoKit */,
-				FB7575EC1E9D08CC00D1E844 /* yotpoKitTests */,
 				FB92FB961E9E646A00D9B127 /* yotpoUsageExample */,
 				FB92FBAB1E9E646A00D9B127 /* yotpoUsageExampleTests */,
 				FB7575E01E9D08CC00D1E844 /* Products */,
@@ -183,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */,
-				FB7575E81E9D08CC00D1E844 /* yotpoKitTests.xctest */,
 				FB92FB951E9E646A00D9B127 /* yotpoUsageExample.app */,
 				FB92FBA81E9E646A00D9B127 /* yotpoUsageExampleTests.xctest */,
 			);
@@ -200,15 +178,6 @@
 				FB7575E31E9D08CC00D1E844 /* Info.plist */,
 			);
 			path = yotpoKit;
-			sourceTree = "<group>";
-		};
-		FB7575EC1E9D08CC00D1E844 /* yotpoKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				FB7575ED1E9D08CC00D1E844 /* yotpoKitTests.swift */,
-				FB7575EF1E9D08CC00D1E844 /* Info.plist */,
-			);
-			path = yotpoKitTests;
 			sourceTree = "<group>";
 		};
 		FB83BD6C1E9D229700FE4971 /* Frameworks */ = {
@@ -321,24 +290,6 @@
 			productReference = FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FB7575E71E9D08CC00D1E844 /* yotpoKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB7575F61E9D08CC00D1E844 /* Build configuration list for PBXNativeTarget "yotpoKitTests" */;
-			buildPhases = (
-				FB7575E41E9D08CC00D1E844 /* Sources */,
-				FB7575E51E9D08CC00D1E844 /* Frameworks */,
-				FB7575E61E9D08CC00D1E844 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB7575EB1E9D08CC00D1E844 /* PBXTargetDependency */,
-			);
-			name = yotpoKitTests;
-			productName = yotpoKitTests;
-			productReference = FB7575E81E9D08CC00D1E844 /* yotpoKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		FB92FB941E9E646A00D9B127 /* yotpoUsageExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB92FBC01E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExample" */;
@@ -388,24 +339,19 @@
 					FB7575DE1E9D08CC00D1E844 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = PFQ8633X58;
-						LastSwiftMigration = 0910;
-						ProvisioningStyle = Automatic;
-					};
-					FB7575E71E9D08CC00D1E844 = {
-						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = PFQ8633X58;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 					};
 					FB92FB941E9E646A00D9B127 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = PFQ8633X58;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 					};
 					FB92FBA71E9E646A00D9B127 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = PFQ8633X58;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 						TestTargetID = FB92FB941E9E646A00D9B127;
 					};
@@ -416,6 +362,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -425,7 +372,6 @@
 			projectRoot = "";
 			targets = (
 				FB7575DE1E9D08CC00D1E844 /* yotpoKit */,
-				FB7575E71E9D08CC00D1E844 /* yotpoKitTests */,
 				FB92FB941E9E646A00D9B127 /* yotpoUsageExample */,
 				FB92FBA71E9E646A00D9B127 /* yotpoUsageExampleTests */,
 			);
@@ -434,13 +380,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		FB7575DD1E9D08CC00D1E844 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB7575E61E9D08CC00D1E844 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -512,14 +451,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB7575E41E9D08CC00D1E844 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB7575EE1E9D08CC00D1E844 /* yotpoKitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FB92FB911E9E646A00D9B127 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -540,11 +471,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FB7575EB1E9D08CC00D1E844 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB7575DE1E9D08CC00D1E844 /* yotpoKit */;
-			targetProxy = FB7575EA1E9D08CC00D1E844 /* PBXContainerItemProxy */;
-		};
 		FB92FBAA1E9E646A00D9B127 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FB92FB941E9E646A00D9B127 /* yotpoUsageExample */;
@@ -711,7 +637,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -738,33 +664,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		FB7575F71E9D08CC00D1E844 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = PFQ8633X58;
-				INFOPLIST_FILE = yotpoKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		FB7575F81E9D08CC00D1E844 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = PFQ8633X58;
-				INFOPLIST_FILE = yotpoKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -782,7 +682,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -800,7 +701,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
@@ -815,7 +717,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yotpoUsageExample.app/yotpoUsageExample";
 			};
 			name = Debug;
@@ -831,7 +733,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yotpoUsageExample.app/yotpoUsageExample";
 			};
 			name = Release;
@@ -853,15 +755,6 @@
 			buildConfigurations = (
 				FB7575F41E9D08CC00D1E844 /* Debug */,
 				FB7575F51E9D08CC00D1E844 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB7575F61E9D08CC00D1E844 /* Build configuration list for PBXNativeTarget "yotpoKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB7575F71E9D08CC00D1E844 /* Debug */,
-				FB7575F81E9D08CC00D1E844 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -17,15 +17,17 @@ open class MyQuestion: RequestYotpo {
     public typealias CompletionDefault = (_ code: Int, _ msg: String) -> Void
     public typealias CompletionQuestion = (_ code: Int, _ title: String, _ msg: String) -> Void
     public typealias CompleteNextPageQuestions = (_ msg: String, _ newQuestions: [Question], _ productQuestio: ProductQuestion) -> Void
-    public typealias CompletionWithQuestionsAndExhibition = (_ code: Int, _ msg: String, _ productQuestion: ProductQuestion, _ questionsExhibition: [QuestionExhibition]) -> Void
+    public typealias CompletionWithQuestionsAndExhibition = (_ code: Int, _ msg: String,
+                                                             _ productQuestion: ProductQuestion,
+                                                             _ questionsExhibition: [QuestionExhibition]) -> Void
     
     open func getQuestions(productId: String, completion: @escaping CompletionWithProductQuestions) {
         let endPoint = Endpoint.MyQuestion().getQuestions(productId: productId, appKey: appKey)
     
-        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+        AF.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject] else {
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject] else {
                         completion(GetMessage.ParsingError.code, GetMessage.ParsingError.msg, nil)
                         return
                 }
@@ -47,10 +49,10 @@ open class MyQuestion: RequestYotpo {
     open func getQuestionPerPage(productId: String, page: Int, completion: @escaping CompletionWithQuestions) {
         let endPoint = Endpoint.MyQuestion().getQuestionPage(productId: productId, appKey: appKey, token: tokenId, page: page)
         
-        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+        AF.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let message = JSON["status"]?["message"] as? String else {
                         completion(GetMessage.ParsingError.code, GetMessage.ParsingError.msg, [])
                         return
@@ -74,10 +76,10 @@ open class MyQuestion: RequestYotpo {
     open func getQuestionResume(productId: String, completion: @escaping CompletionWithProductQuestions) {
         let endPoint = Endpoint.MyQuestion().getQuestionResume(productId: productId, appKey: appKey)
         
-        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+        AF.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String else {
                         completion(GetMessage.ParsingError.code, GetMessage.ParsingError.msg, nil)
@@ -105,10 +107,10 @@ open class MyQuestion: RequestYotpo {
     
     open func saveVoteQuestion(questionId: String, voteType: VoteType, completion: @escaping CompletionDefault) {
         let endPoint = Endpoint.MyQuestion().saveVoteQuestion(questionId: questionId, vote: voteType)
-        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+        AF.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String,
                     JSON["response"] as? [String: AnyObject] != nil else {
@@ -126,10 +128,10 @@ open class MyQuestion: RequestYotpo {
     open func removeVoteQuestion(questionId: String, voteType: VoteType, completion: @escaping CompletionDefault) {
         let endPoint = Endpoint.MyQuestion().removeVoteQuestion(questionId: questionId, vote: voteType)
         
-        Alamofire.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
+        AF.request(endPoint.URI, method: endPoint.method).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     let message = JSON["status"]?["message"] as? String,
                     JSON["response"] as? [String: AnyObject] != nil else {
@@ -145,11 +147,11 @@ open class MyQuestion: RequestYotpo {
     
     open func saveQuestion(post: Post, completion: @escaping CompletionQuestion) {
         let parameter = post.convertToParameterQuestion(appKey: appKey)
-        Alamofire.request(Endpoint.MyQuestion.saveQuestion.URI, method: Endpoint.MyQuestion.saveQuestion.method,
+        AF.request(Endpoint.MyQuestion.saveQuestion.URI, method: Endpoint.MyQuestion.saveQuestion.method,
                           parameters: parameter).responseJSON { (response) in
             switch response.result {
-            case .success:
-                guard let JSON = response.result.value as? [String: AnyObject],
+            case .success(let data):
+                guard let JSON = data as? [String: AnyObject],
                     let code = JSON["status"]?["code"] as? Int,
                     JSON["status"]?["message"] as? String != nil,
                     code == 200  else {
