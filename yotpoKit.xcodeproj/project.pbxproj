@@ -6,778 +6,955 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"yotpoKit::yotpoKitPackageTests::ProductTarget" /* yotpoKitPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_170 /* Build configuration list for PBXAggregateTarget "yotpoKitPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_173 /* PBXTargetDependency */,
+			);
+			name = yotpoKitPackageTests;
+			productName = yotpoKitPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		FB4313101EA50048008A4B37 /* ProductQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43130F1EA50048008A4B37 /* ProductQuestion.swift */; };
-		FB4313121EA502DD008A4B37 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313111EA502DD008A4B37 /* Question.swift */; };
-		FB4313141EA50560008A4B37 /* Asker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313131EA50560008A4B37 /* Asker.swift */; };
-		FB4313161EA50C67008A4B37 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313151EA50C67008A4B37 /* Answer.swift */; };
-		FB43131A1EA522B0008A4B37 /* BadgeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4313191EA522B0008A4B37 /* BadgeObject.swift */; };
-		FB45C6701EC3723900D50CAA /* QuestionExhibition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB45C66F1EC3723900D50CAA /* QuestionExhibition.swift */; };
-		FB66AA0D1EC243780039CF8B /* Yotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66AA0C1EC243780039CF8B /* Yotpo.swift */; };
-		FB7575F01E9D08CC00D1E844 /* yotpoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7575E21E9D08CC00D1E844 /* yotpoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB83BD6E1E9D229700FE4971 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB83BD6D1E9D229700FE4971 /* Alamofire.framework */; };
-		FB83BD731E9D22C300FE4971 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD721E9D22C300FE4971 /* Review.swift */; };
-		FB83BD7B1E9D239900FE4971 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7A1E9D239900FE4971 /* EndPoint.swift */; };
-		FB83BD801E9D251900FE4971 /* MyReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83BD7F1E9D251900FE4971 /* MyReview.swift */; };
-		FB8DB6631EA4EE0C0006B8BB /* MyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DB6621EA4EE0C0006B8BB /* MyQuestion.swift */; };
-		FB92FB981E9E646A00D9B127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FB971E9E646A00D9B127 /* AppDelegate.swift */; };
-		FB92FB9A1E9E646A00D9B127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FB991E9E646A00D9B127 /* ViewController.swift */; };
-		FB92FB9D1E9E646A00D9B127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB92FB9B1E9E646A00D9B127 /* Main.storyboard */; };
-		FB92FB9F1E9E646A00D9B127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB92FB9E1E9E646A00D9B127 /* Assets.xcassets */; };
-		FB92FBA21E9E646A00D9B127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB92FBA01E9E646A00D9B127 /* LaunchScreen.storyboard */; };
-		FB92FBAD1E9E646A00D9B127 /* yotpoUsageExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92FBAC1E9E646A00D9B127 /* yotpoUsageExampleTests.swift */; };
-		FB92FBC31E9E647600D9B127 /* yotpoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */; };
-		FB92FBC41E9E64A500D9B127 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB83BD701E9D22A400FE4971 /* Alamofire.framework */; };
-		FB92FBC51E9E64A500D9B127 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB83BD701E9D22A400FE4971 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FBA46CB31EA639720060CBC3 /* RequestYotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA46CB21EA639720060CBC3 /* RequestYotpo.swift */; };
-		FBA46CB51EA639E70060CBC3 /* APIYotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA46CB41EA639E70060CBC3 /* APIYotpo.swift */; };
-		FBA49C411EA0127E000A5FBE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA49C401EA0127E000A5FBE /* Post.swift */; };
-		FBC0ABD41EB8D9E7002F8483 /* ProductYotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0ABD31EB8D9E7002F8483 /* ProductYotpo.swift */; };
-		FBC9A3831E9E9A100053E597 /* ProductReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3821E9E9A100053E597 /* ProductReviews.swift */; };
-		FBC9A3851E9EA2C10053E597 /* UserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3841E9EA2C10053E597 /* UserReview.swift */; };
-		FBC9A3871E9EA9F70053E597 /* ProductDetailReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3861E9EA9F70053E597 /* ProductDetailReview.swift */; };
-		FBC9A3891E9EAABA0053E597 /* SocialLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A3881E9EAABA0053E597 /* SocialLinks.swift */; };
-		FBC9A38B1E9EADBC0053E597 /* BottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A38A1E9EADBC0053E597 /* BottomLine.swift */; };
-		FBC9A38D1E9EAF270053E597 /* StarDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A38C1E9EAF270053E597 /* StarDistribution.swift */; };
-		FBC9A38F1E9EB1950053E597 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9A38E1E9EB1950053E597 /* Pagination.swift */; };
+		OBJ_100 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* HTTPMethod.swift */; };
+		OBJ_101 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* MultipartFormData.swift */; };
+		OBJ_102 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* MultipartUpload.swift */; };
+		OBJ_103 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* NetworkReachabilityManager.swift */; };
+		OBJ_104 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Notifications.swift */; };
+		OBJ_105 /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* OperationQueue+Alamofire.swift */; };
+		OBJ_106 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* ParameterEncoder.swift */; };
+		OBJ_107 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* ParameterEncoding.swift */; };
+		OBJ_108 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Protected.swift */; };
+		OBJ_109 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* RedirectHandler.swift */; };
+		OBJ_110 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Request.swift */; };
+		OBJ_111 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* RequestInterceptor.swift */; };
+		OBJ_112 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* RequestTaskMap.swift */; };
+		OBJ_113 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Response.swift */; };
+		OBJ_114 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* ResponseSerialization.swift */; };
+		OBJ_115 /* Result+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Result+Alamofire.swift */; };
+		OBJ_116 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* RetryPolicy.swift */; };
+		OBJ_117 /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* ServerTrustEvaluation.swift */; };
+		OBJ_118 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* Session.swift */; };
+		OBJ_119 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* SessionDelegate.swift */; };
+		OBJ_120 /* StringEncoding+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* StringEncoding+Alamofire.swift */; };
+		OBJ_121 /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* URLConvertible+URLRequestConvertible.swift */; };
+		OBJ_122 /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* URLEncodedFormEncoder.swift */; };
+		OBJ_123 /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* URLRequest+Alamofire.swift */; };
+		OBJ_124 /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* URLSessionConfiguration+Alamofire.swift */; };
+		OBJ_125 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* Validation.swift */; };
+		OBJ_132 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Package.swift */; };
+		OBJ_138 /* APIYotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* APIYotpo.swift */; };
+		OBJ_139 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Answer.swift */; };
+		OBJ_140 /* Asker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Asker.swift */; };
+		OBJ_141 /* BadgeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* BadgeObject.swift */; };
+		OBJ_142 /* BottomLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* BottomLine.swift */; };
+		OBJ_143 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* EndPoint.swift */; };
+		OBJ_144 /* MyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* MyQuestion.swift */; };
+		OBJ_145 /* MyReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* MyReview.swift */; };
+		OBJ_146 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Pagination.swift */; };
+		OBJ_147 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Post.swift */; };
+		OBJ_148 /* ProductDetailReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ProductDetailReview.swift */; };
+		OBJ_149 /* ProductQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ProductQuestion.swift */; };
+		OBJ_150 /* ProductReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* ProductReviews.swift */; };
+		OBJ_151 /* ProductYotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ProductYotpo.swift */; };
+		OBJ_152 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Question.swift */; };
+		OBJ_153 /* QuestionExhibition.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* QuestionExhibition.swift */; };
+		OBJ_154 /* RequestYotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* RequestYotpo.swift */; };
+		OBJ_155 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Review.swift */; };
+		OBJ_156 /* SocialLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* SocialLinks.swift */; };
+		OBJ_157 /* StarDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* StarDistribution.swift */; };
+		OBJ_158 /* UserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* UserReview.swift */; };
+		OBJ_159 /* Yotpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Yotpo.swift */; };
+		OBJ_161 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
+		OBJ_168 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_179 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* AppDelegate.swift */; };
+		OBJ_180 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ViewController.swift */; };
+		OBJ_181 /* yotpoUsageExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* yotpoUsageExampleTests.swift */; };
+		OBJ_183 /* yotpoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "yotpoKit::yotpoKit::Product" /* yotpoKit.framework */; };
+		OBJ_184 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Alamofire::Alamofire::Product" /* Alamofire.framework */; };
+		OBJ_91 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* AFError.swift */; };
+		OBJ_92 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Alamofire.swift */; };
+		OBJ_93 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* AlamofireExtended.swift */; };
+		OBJ_94 /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* AuthenticationInterceptor.swift */; };
+		OBJ_95 /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* CachedResponseHandler.swift */; };
+		OBJ_96 /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Combine.swift */; };
+		OBJ_97 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* DispatchQueue+Alamofire.swift */; };
+		OBJ_98 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* EventMonitor.swift */; };
+		OBJ_99 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* HTTPHeaders.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FB92FBA91E9E646A00D9B127 /* PBXContainerItemProxy */ = {
+		65C4451626C1894200F649C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FB7575D61E9D08CC00D1E844 /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FB92FB941E9E646A00D9B127;
-			remoteInfo = yotpoUsageExample;
+			remoteGlobalIDString = "Alamofire::Alamofire";
+			remoteInfo = Alamofire;
+		};
+		65C4451726C1894200F649C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "yotpoKit::yotpoKit";
+			remoteInfo = yotpoKit;
+		};
+		65C4451826C1894200F649C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Alamofire::Alamofire";
+			remoteInfo = Alamofire;
+		};
+		65C4451926C1894300F649C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "yotpoKit::yotpoKitTests";
+			remoteInfo = yotpoKitTests;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		FB92FBC61E9E64A500D9B127 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FB92FBC51E9E64A500D9B127 /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		FB43130F1EA50048008A4B37 /* ProductQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductQuestion.swift; sourceTree = "<group>"; };
-		FB4313111EA502DD008A4B37 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		FB4313131EA50560008A4B37 /* Asker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asker.swift; sourceTree = "<group>"; };
-		FB4313151EA50C67008A4B37 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		FB4313191EA522B0008A4B37 /* BadgeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeObject.swift; sourceTree = "<group>"; };
-		FB45C66F1EC3723900D50CAA /* QuestionExhibition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionExhibition.swift; sourceTree = "<group>"; };
-		FB66AA0C1EC243780039CF8B /* Yotpo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yotpo.swift; sourceTree = "<group>"; };
-		FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = yotpoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB7575E21E9D08CC00D1E844 /* yotpoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yotpoKit.h; sourceTree = "<group>"; };
-		FB7575E31E9D08CC00D1E844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB83BD6D1E9D229700FE4971 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		FB83BD701E9D22A400FE4971 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		FB83BD721E9D22C300FE4971 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Review.swift; path = ../Review.swift; sourceTree = "<group>"; };
-		FB83BD7A1E9D239900FE4971 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		FB83BD7F1E9D251900FE4971 /* MyReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReview.swift; sourceTree = "<group>"; };
-		FB8DB6621EA4EE0C0006B8BB /* MyQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQuestion.swift; sourceTree = "<group>"; };
-		FB92FB951E9E646A00D9B127 /* yotpoUsageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yotpoUsageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB92FB971E9E646A00D9B127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB92FB991E9E646A00D9B127 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FB92FB9C1E9E646A00D9B127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FB92FB9E1E9E646A00D9B127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FB92FBA11E9E646A00D9B127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FB92FBA31E9E646A00D9B127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB92FBA81E9E646A00D9B127 /* yotpoUsageExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yotpoUsageExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB92FBAC1E9E646A00D9B127 /* yotpoUsageExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yotpoUsageExampleTests.swift; sourceTree = "<group>"; };
-		FB92FBAE1E9E646A00D9B127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBA46CB21EA639720060CBC3 /* RequestYotpo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestYotpo.swift; sourceTree = "<group>"; };
-		FBA46CB41EA639E70060CBC3 /* APIYotpo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIYotpo.swift; sourceTree = "<group>"; };
-		FBA49C401EA0127E000A5FBE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		FBC0ABD31EB8D9E7002F8483 /* ProductYotpo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductYotpo.swift; sourceTree = "<group>"; };
-		FBC9A3821E9E9A100053E597 /* ProductReviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductReviews.swift; sourceTree = "<group>"; };
-		FBC9A3841E9EA2C10053E597 /* UserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserReview.swift; sourceTree = "<group>"; };
-		FBC9A3861E9EA9F70053E597 /* ProductDetailReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailReview.swift; sourceTree = "<group>"; };
-		FBC9A3881E9EAABA0053E597 /* SocialLinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLinks.swift; sourceTree = "<group>"; };
-		FBC9A38A1E9EADBC0053E597 /* BottomLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomLine.swift; sourceTree = "<group>"; };
-		FBC9A38C1E9EAF270053E597 /* StarDistribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarDistribution.swift; sourceTree = "<group>"; };
-		FBC9A38E1E9EB1950053E597 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		"Alamofire::Alamofire::Product" /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		OBJ_11 /* APIYotpo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIYotpo.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		OBJ_13 /* Asker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asker.swift; sourceTree = "<group>"; };
+		OBJ_14 /* BadgeObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeObject.swift; sourceTree = "<group>"; };
+		OBJ_15 /* BottomLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLine.swift; sourceTree = "<group>"; };
+		OBJ_16 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		OBJ_17 /* MyQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuestion.swift; sourceTree = "<group>"; };
+		OBJ_18 /* MyReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReview.swift; sourceTree = "<group>"; };
+		OBJ_19 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		OBJ_21 /* ProductDetailReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailReview.swift; sourceTree = "<group>"; };
+		OBJ_22 /* ProductQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductQuestion.swift; sourceTree = "<group>"; };
+		OBJ_23 /* ProductReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductReviews.swift; sourceTree = "<group>"; };
+		OBJ_24 /* ProductYotpo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductYotpo.swift; sourceTree = "<group>"; };
+		OBJ_25 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		OBJ_26 /* QuestionExhibition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionExhibition.swift; sourceTree = "<group>"; };
+		OBJ_27 /* RequestYotpo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestYotpo.swift; sourceTree = "<group>"; };
+		OBJ_28 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		OBJ_29 /* SocialLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLinks.swift; sourceTree = "<group>"; };
+		OBJ_30 /* StarDistribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarDistribution.swift; sourceTree = "<group>"; };
+		OBJ_31 /* UserReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReview.swift; sourceTree = "<group>"; };
+		OBJ_32 /* Yotpo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yotpo.swift; sourceTree = "<group>"; };
+		OBJ_36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		OBJ_37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		OBJ_39 /* yotpoUsageExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yotpoUsageExampleTests.swift; sourceTree = "<group>"; };
+		OBJ_42 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/tassio.marques/spm/yotpoKit/.build/checkouts/Alamofire/Package.swift; sourceTree = "<group>"; };
+		OBJ_43 /* AFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
+		OBJ_44 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		OBJ_45 /* AlamofireExtended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireExtended.swift; sourceTree = "<group>"; };
+		OBJ_46 /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationInterceptor.swift; sourceTree = "<group>"; };
+		OBJ_47 /* CachedResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedResponseHandler.swift; sourceTree = "<group>"; };
+		OBJ_48 /* Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combine.swift; sourceTree = "<group>"; };
+		OBJ_49 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		OBJ_50 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		OBJ_51 /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
+		OBJ_52 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		OBJ_53 /* MultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		OBJ_54 /* MultipartUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartUpload.swift; sourceTree = "<group>"; };
+		OBJ_55 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		OBJ_56 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		OBJ_57 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		OBJ_58 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		OBJ_59 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* Protected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protected.swift; sourceTree = "<group>"; };
+		OBJ_61 /* RedirectHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectHandler.swift; sourceTree = "<group>"; };
+		OBJ_62 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		OBJ_63 /* RequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
+		OBJ_64 /* RequestTaskMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTaskMap.swift; sourceTree = "<group>"; };
+		OBJ_65 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		OBJ_66 /* ResponseSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		OBJ_67 /* Result+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Alamofire.swift"; sourceTree = "<group>"; };
+		OBJ_68 /* RetryPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryPolicy.swift; sourceTree = "<group>"; };
+		OBJ_69 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTrustEvaluation.swift; sourceTree = "<group>"; };
+		OBJ_70 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		OBJ_71 /* SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		OBJ_72 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
+		OBJ_73 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
+		OBJ_74 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
+		OBJ_75 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
+		OBJ_76 /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
+		OBJ_77 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		OBJ_82 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = SOURCE_ROOT; };
+		OBJ_83 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		OBJ_84 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		OBJ_85 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_9 /* yotpoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yotpoKit.h; sourceTree = "<group>"; };
+		"yotpoKit::yotpoKit::Product" /* yotpoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = yotpoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"yotpoKit::yotpoKitTests::Product" /* yotpoKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = yotpoKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FB7575DB1E9D08CC00D1E844 /* Frameworks */ = {
+		OBJ_126 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				FB83BD6E1E9D229700FE4971 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB92FB921E9E646A00D9B127 /* Frameworks */ = {
+		OBJ_160 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				FB92FBC31E9E647600D9B127 /* yotpoKit.framework in Frameworks */,
-				FB92FBC41E9E64A500D9B127 /* Alamofire.framework in Frameworks */,
+				OBJ_161 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB92FBA51E9E646A00D9B127 /* Frameworks */ = {
+		OBJ_182 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
+				OBJ_183 /* yotpoKit.framework in Frameworks */,
+				OBJ_184 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FB43130E1EA4FFEF008A4B37 /* Question */ = {
+		OBJ_33 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FB43130F1EA50048008A4B37 /* ProductQuestion.swift */,
-				FB4313111EA502DD008A4B37 /* Question.swift */,
-				FB4313131EA50560008A4B37 /* Asker.swift */,
-				FB4313191EA522B0008A4B37 /* BadgeObject.swift */,
-				FB4313151EA50C67008A4B37 /* Answer.swift */,
-				FB45C66F1EC3723900D50CAA /* QuestionExhibition.swift */,
+				OBJ_34 /* yotpoKitTests */,
 			);
-			name = Question;
-			sourceTree = "<group>";
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
 		};
-		FB7575D51E9D08CC00D1E844 = {
+		OBJ_34 /* yotpoKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB7575E11E9D08CC00D1E844 /* yotpoKit */,
-				FB92FB961E9E646A00D9B127 /* yotpoUsageExample */,
-				FB92FBAB1E9E646A00D9B127 /* yotpoUsageExampleTests */,
-				FB7575E01E9D08CC00D1E844 /* Products */,
-				FB83BD6C1E9D229700FE4971 /* Frameworks */,
+				OBJ_35 /* yotpoUsageExample */,
+				OBJ_38 /* yotpoUsageExampleTests */,
 			);
-			sourceTree = "<group>";
+			name = yotpoKitTests;
+			path = Tests/yotpoKitTests;
+			sourceTree = SOURCE_ROOT;
 		};
-		FB7575E01E9D08CC00D1E844 /* Products */ = {
+		OBJ_35 /* yotpoUsageExample */ = {
 			isa = PBXGroup;
 			children = (
-				FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */,
-				FB92FB951E9E646A00D9B127 /* yotpoUsageExample.app */,
-				FB92FBA81E9E646A00D9B127 /* yotpoUsageExampleTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FB7575E11E9D08CC00D1E844 /* yotpoKit */ = {
-			isa = PBXGroup;
-			children = (
-				FB83BD791E9D238A00FE4971 /* API */,
-				FB83BD7E1E9D24DB00FE4971 /* Services */,
-				FB83BD741E9D22CA00FE4971 /* Models */,
-				FB7575E21E9D08CC00D1E844 /* yotpoKit.h */,
-				FB7575E31E9D08CC00D1E844 /* Info.plist */,
-			);
-			path = yotpoKit;
-			sourceTree = "<group>";
-		};
-		FB83BD6C1E9D229700FE4971 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FB83BD701E9D22A400FE4971 /* Alamofire.framework */,
-				FB83BD6D1E9D229700FE4971 /* Alamofire.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FB83BD741E9D22CA00FE4971 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FB43130E1EA4FFEF008A4B37 /* Question */,
-				FB8DB6611EA4EC780006B8BB /* Reviews */,
-				FBC0ABD31EB8D9E7002F8483 /* ProductYotpo.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		FB83BD791E9D238A00FE4971 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				FB83BD7A1E9D239900FE4971 /* EndPoint.swift */,
-				FBA46CB21EA639720060CBC3 /* RequestYotpo.swift */,
-				FBA46CB41EA639E70060CBC3 /* APIYotpo.swift */,
-			);
-			name = API;
-			sourceTree = "<group>";
-		};
-		FB83BD7E1E9D24DB00FE4971 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				FB83BD7F1E9D251900FE4971 /* MyReview.swift */,
-				FB8DB6621EA4EE0C0006B8BB /* MyQuestion.swift */,
-				FB66AA0C1EC243780039CF8B /* Yotpo.swift */,
-			);
-			name = Services;
-			sourceTree = "<group>";
-		};
-		FB8DB6611EA4EC780006B8BB /* Reviews */ = {
-			isa = PBXGroup;
-			children = (
-				FBC9A3821E9E9A100053E597 /* ProductReviews.swift */,
-				FB83BD721E9D22C300FE4971 /* Review.swift */,
-				FBC9A3841E9EA2C10053E597 /* UserReview.swift */,
-				FBC9A3861E9EA9F70053E597 /* ProductDetailReview.swift */,
-				FBC9A3881E9EAABA0053E597 /* SocialLinks.swift */,
-				FBC9A38A1E9EADBC0053E597 /* BottomLine.swift */,
-				FBC9A38C1E9EAF270053E597 /* StarDistribution.swift */,
-				FBC9A38E1E9EB1950053E597 /* Pagination.swift */,
-				FBA49C401EA0127E000A5FBE /* Post.swift */,
-			);
-			name = Reviews;
-			sourceTree = "<group>";
-		};
-		FB92FB961E9E646A00D9B127 /* yotpoUsageExample */ = {
-			isa = PBXGroup;
-			children = (
-				FB92FB971E9E646A00D9B127 /* AppDelegate.swift */,
-				FB92FB991E9E646A00D9B127 /* ViewController.swift */,
-				FB92FB9B1E9E646A00D9B127 /* Main.storyboard */,
-				FB92FB9E1E9E646A00D9B127 /* Assets.xcassets */,
-				FB92FBA01E9E646A00D9B127 /* LaunchScreen.storyboard */,
-				FB92FBA31E9E646A00D9B127 /* Info.plist */,
+				OBJ_36 /* AppDelegate.swift */,
+				OBJ_37 /* ViewController.swift */,
 			);
 			path = yotpoUsageExample;
 			sourceTree = "<group>";
 		};
-		FB92FBAB1E9E646A00D9B127 /* yotpoUsageExampleTests */ = {
+		OBJ_38 /* yotpoUsageExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB92FBAC1E9E646A00D9B127 /* yotpoUsageExampleTests.swift */,
-				FB92FBAE1E9E646A00D9B127 /* Info.plist */,
+				OBJ_39 /* yotpoUsageExampleTests.swift */,
 			);
 			path = yotpoUsageExampleTests;
 			sourceTree = "<group>";
 		};
+		OBJ_40 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_41 /* Alamofire 5.4.3 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_41 /* Alamofire 5.4.3 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_42 /* Package.swift */,
+				OBJ_43 /* AFError.swift */,
+				OBJ_44 /* Alamofire.swift */,
+				OBJ_45 /* AlamofireExtended.swift */,
+				OBJ_46 /* AuthenticationInterceptor.swift */,
+				OBJ_47 /* CachedResponseHandler.swift */,
+				OBJ_48 /* Combine.swift */,
+				OBJ_49 /* DispatchQueue+Alamofire.swift */,
+				OBJ_50 /* EventMonitor.swift */,
+				OBJ_51 /* HTTPHeaders.swift */,
+				OBJ_52 /* HTTPMethod.swift */,
+				OBJ_53 /* MultipartFormData.swift */,
+				OBJ_54 /* MultipartUpload.swift */,
+				OBJ_55 /* NetworkReachabilityManager.swift */,
+				OBJ_56 /* Notifications.swift */,
+				OBJ_57 /* OperationQueue+Alamofire.swift */,
+				OBJ_58 /* ParameterEncoder.swift */,
+				OBJ_59 /* ParameterEncoding.swift */,
+				OBJ_60 /* Protected.swift */,
+				OBJ_61 /* RedirectHandler.swift */,
+				OBJ_62 /* Request.swift */,
+				OBJ_63 /* RequestInterceptor.swift */,
+				OBJ_64 /* RequestTaskMap.swift */,
+				OBJ_65 /* Response.swift */,
+				OBJ_66 /* ResponseSerialization.swift */,
+				OBJ_67 /* Result+Alamofire.swift */,
+				OBJ_68 /* RetryPolicy.swift */,
+				OBJ_69 /* ServerTrustEvaluation.swift */,
+				OBJ_70 /* Session.swift */,
+				OBJ_71 /* SessionDelegate.swift */,
+				OBJ_72 /* StringEncoding+Alamofire.swift */,
+				OBJ_73 /* URLConvertible+URLRequestConvertible.swift */,
+				OBJ_74 /* URLEncodedFormEncoder.swift */,
+				OBJ_75 /* URLRequest+Alamofire.swift */,
+				OBJ_76 /* URLSessionConfiguration+Alamofire.swift */,
+				OBJ_77 /* Validation.swift */,
+			);
+			name = "Alamofire 5.4.3";
+			path = .build/checkouts/Alamofire/Source;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_33 /* Tests */,
+				OBJ_40 /* Dependencies */,
+				OBJ_78 /* Products */,
+				OBJ_82 /* Carthage */,
+				OBJ_83 /* Cartfile.resolved */,
+				OBJ_84 /* Cartfile */,
+				OBJ_85 /* README.md */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* yotpoKit */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Alamofire::Alamofire::Product" /* Alamofire.framework */,
+				"yotpoKit::yotpoKit::Product" /* yotpoKit.framework */,
+				"yotpoKit::yotpoKitTests::Product" /* yotpoKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_8 /* yotpoKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* yotpoKit.h */,
+				OBJ_10 /* Info.plist */,
+				OBJ_11 /* APIYotpo.swift */,
+				OBJ_12 /* Answer.swift */,
+				OBJ_13 /* Asker.swift */,
+				OBJ_14 /* BadgeObject.swift */,
+				OBJ_15 /* BottomLine.swift */,
+				OBJ_16 /* EndPoint.swift */,
+				OBJ_17 /* MyQuestion.swift */,
+				OBJ_18 /* MyReview.swift */,
+				OBJ_19 /* Pagination.swift */,
+				OBJ_20 /* Post.swift */,
+				OBJ_21 /* ProductDetailReview.swift */,
+				OBJ_22 /* ProductQuestion.swift */,
+				OBJ_23 /* ProductReviews.swift */,
+				OBJ_24 /* ProductYotpo.swift */,
+				OBJ_25 /* Question.swift */,
+				OBJ_26 /* QuestionExhibition.swift */,
+				OBJ_27 /* RequestYotpo.swift */,
+				OBJ_28 /* Review.swift */,
+				OBJ_29 /* SocialLinks.swift */,
+				OBJ_30 /* StarDistribution.swift */,
+				OBJ_31 /* UserReview.swift */,
+				OBJ_32 /* Yotpo.swift */,
+			);
+			name = yotpoKit;
+			path = Sources/yotpoKit;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		FB7575DC1E9D08CC00D1E844 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB7575F01E9D08CC00D1E844 /* yotpoKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		FB7575DE1E9D08CC00D1E844 /* yotpoKit */ = {
+		"Alamofire::Alamofire" /* Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB7575F31E9D08CC00D1E844 /* Build configuration list for PBXNativeTarget "yotpoKit" */;
+			buildConfigurationList = OBJ_87 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-				FB7575DA1E9D08CC00D1E844 /* Sources */,
-				FB7575DB1E9D08CC00D1E844 /* Frameworks */,
-				FB7575DC1E9D08CC00D1E844 /* Headers */,
-				FB7575DD1E9D08CC00D1E844 /* Resources */,
-				FB25C0071F3394DE009F517B /* ShellScript */,
+				OBJ_90 /* Sources */,
+				OBJ_126 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = "Alamofire::Alamofire::Product" /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Alamofire::SwiftPMPackageDescription" /* AlamofirePackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_128 /* Build configuration list for PBXNativeTarget "AlamofirePackageDescription" */;
+			buildPhases = (
+				OBJ_131 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlamofirePackageDescription;
+			productName = AlamofirePackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"yotpoKit::SwiftPMPackageDescription" /* yotpoKitPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_164 /* Build configuration list for PBXNativeTarget "yotpoKitPackageDescription" */;
+			buildPhases = (
+				OBJ_167 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yotpoKitPackageDescription;
+			productName = yotpoKitPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"yotpoKit::yotpoKit" /* yotpoKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_134 /* Build configuration list for PBXNativeTarget "yotpoKit" */;
+			buildPhases = (
+				OBJ_137 /* Sources */,
+				OBJ_160 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_162 /* PBXTargetDependency */,
 			);
 			name = yotpoKit;
 			productName = yotpoKit;
-			productReference = FB7575DF1E9D08CC00D1E844 /* yotpoKit.framework */;
+			productReference = "yotpoKit::yotpoKit::Product" /* yotpoKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FB92FB941E9E646A00D9B127 /* yotpoUsageExample */ = {
+		"yotpoKit::yotpoKitTests" /* yotpoKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB92FBC01E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExample" */;
+			buildConfigurationList = OBJ_175 /* Build configuration list for PBXNativeTarget "yotpoKitTests" */;
 			buildPhases = (
-				FB92FB911E9E646A00D9B127 /* Sources */,
-				FB92FB921E9E646A00D9B127 /* Frameworks */,
-				FB92FB931E9E646A00D9B127 /* Resources */,
-				FB92FBC61E9E64A500D9B127 /* Embed Frameworks */,
+				OBJ_178 /* Sources */,
+				OBJ_182 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_185 /* PBXTargetDependency */,
+				OBJ_186 /* PBXTargetDependency */,
 			);
-			name = yotpoUsageExample;
-			productName = yotpoUsageExample;
-			productReference = FB92FB951E9E646A00D9B127 /* yotpoUsageExample.app */;
-			productType = "com.apple.product-type.application";
-		};
-		FB92FBA71E9E646A00D9B127 /* yotpoUsageExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB92FBC11E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExampleTests" */;
-			buildPhases = (
-				FB92FBA41E9E646A00D9B127 /* Sources */,
-				FB92FBA51E9E646A00D9B127 /* Frameworks */,
-				FB92FBA61E9E646A00D9B127 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB92FBAA1E9E646A00D9B127 /* PBXTargetDependency */,
-			);
-			name = yotpoUsageExampleTests;
-			productName = yotpoUsageExampleTests;
-			productReference = FB92FBA81E9E646A00D9B127 /* yotpoUsageExampleTests.xctest */;
+			name = yotpoKitTests;
+			productName = yotpoKitTests;
+			productReference = "yotpoKit::yotpoKitTests::Product" /* yotpoKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FB7575D61E9D08CC00D1E844 /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0910;
-				ORGANIZATIONNAME = "Liliane Lima";
-				TargetAttributes = {
-					FB7575DE1E9D08CC00D1E844 = {
-						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = PFQ8633X58;
-						LastSwiftMigration = 1240;
-						ProvisioningStyle = Automatic;
-					};
-					FB92FB941E9E646A00D9B127 = {
-						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = PFQ8633X58;
-						LastSwiftMigration = 1240;
-						ProvisioningStyle = Automatic;
-					};
-					FB92FBA71E9E646A00D9B127 = {
-						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = PFQ8633X58;
-						LastSwiftMigration = 1240;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FB92FB941E9E646A00D9B127;
-					};
-				};
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = FB7575D91E9D08CC00D1E844 /* Build configuration list for PBXProject "yotpoKit" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "yotpoKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
-				Base,
 			);
-			mainGroup = FB7575D51E9D08CC00D1E844;
-			productRefGroup = FB7575E01E9D08CC00D1E844 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_78 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB7575DE1E9D08CC00D1E844 /* yotpoKit */,
-				FB92FB941E9E646A00D9B127 /* yotpoUsageExample */,
-				FB92FBA71E9E646A00D9B127 /* yotpoUsageExampleTests */,
+				"Alamofire::Alamofire" /* Alamofire */,
+				"Alamofire::SwiftPMPackageDescription" /* AlamofirePackageDescription */,
+				"yotpoKit::yotpoKit" /* yotpoKit */,
+				"yotpoKit::SwiftPMPackageDescription" /* yotpoKitPackageDescription */,
+				"yotpoKit::yotpoKitPackageTests::ProductTarget" /* yotpoKitPackageTests */,
+				"yotpoKit::yotpoKitTests" /* yotpoKitTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		FB7575DD1E9D08CC00D1E844 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB92FB931E9E646A00D9B127 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB92FBA21E9E646A00D9B127 /* LaunchScreen.storyboard in Resources */,
-				FB92FB9F1E9E646A00D9B127 /* Assets.xcassets in Resources */,
-				FB92FB9D1E9E646A00D9B127 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB92FBA61E9E646A00D9B127 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		FB25C0071F3394DE009F517B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		FB7575DA1E9D08CC00D1E844 /* Sources */ = {
+		OBJ_131 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				FBC9A3851E9EA2C10053E597 /* UserReview.swift in Sources */,
-				FBC0ABD41EB8D9E7002F8483 /* ProductYotpo.swift in Sources */,
-				FB83BD7B1E9D239900FE4971 /* EndPoint.swift in Sources */,
-				FB43131A1EA522B0008A4B37 /* BadgeObject.swift in Sources */,
-				FBC9A3871E9EA9F70053E597 /* ProductDetailReview.swift in Sources */,
-				FB4313121EA502DD008A4B37 /* Question.swift in Sources */,
-				FB4313141EA50560008A4B37 /* Asker.swift in Sources */,
-				FBC9A3891E9EAABA0053E597 /* SocialLinks.swift in Sources */,
-				FBA49C411EA0127E000A5FBE /* Post.swift in Sources */,
-				FB66AA0D1EC243780039CF8B /* Yotpo.swift in Sources */,
-				FB83BD801E9D251900FE4971 /* MyReview.swift in Sources */,
-				FB83BD731E9D22C300FE4971 /* Review.swift in Sources */,
-				FB4313101EA50048008A4B37 /* ProductQuestion.swift in Sources */,
-				FBA46CB31EA639720060CBC3 /* RequestYotpo.swift in Sources */,
-				FBC9A38B1E9EADBC0053E597 /* BottomLine.swift in Sources */,
-				FB4313161EA50C67008A4B37 /* Answer.swift in Sources */,
-				FB45C6701EC3723900D50CAA /* QuestionExhibition.swift in Sources */,
-				FBA46CB51EA639E70060CBC3 /* APIYotpo.swift in Sources */,
-				FBC9A38F1E9EB1950053E597 /* Pagination.swift in Sources */,
-				FB8DB6631EA4EE0C0006B8BB /* MyQuestion.swift in Sources */,
-				FBC9A38D1E9EAF270053E597 /* StarDistribution.swift in Sources */,
-				FBC9A3831E9E9A100053E597 /* ProductReviews.swift in Sources */,
+				OBJ_132 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB92FB911E9E646A00D9B127 /* Sources */ = {
+		OBJ_137 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				FB92FB9A1E9E646A00D9B127 /* ViewController.swift in Sources */,
-				FB92FB981E9E646A00D9B127 /* AppDelegate.swift in Sources */,
+				OBJ_138 /* APIYotpo.swift in Sources */,
+				OBJ_139 /* Answer.swift in Sources */,
+				OBJ_140 /* Asker.swift in Sources */,
+				OBJ_141 /* BadgeObject.swift in Sources */,
+				OBJ_142 /* BottomLine.swift in Sources */,
+				OBJ_143 /* EndPoint.swift in Sources */,
+				OBJ_144 /* MyQuestion.swift in Sources */,
+				OBJ_145 /* MyReview.swift in Sources */,
+				OBJ_146 /* Pagination.swift in Sources */,
+				OBJ_147 /* Post.swift in Sources */,
+				OBJ_148 /* ProductDetailReview.swift in Sources */,
+				OBJ_149 /* ProductQuestion.swift in Sources */,
+				OBJ_150 /* ProductReviews.swift in Sources */,
+				OBJ_151 /* ProductYotpo.swift in Sources */,
+				OBJ_152 /* Question.swift in Sources */,
+				OBJ_153 /* QuestionExhibition.swift in Sources */,
+				OBJ_154 /* RequestYotpo.swift in Sources */,
+				OBJ_155 /* Review.swift in Sources */,
+				OBJ_156 /* SocialLinks.swift in Sources */,
+				OBJ_157 /* StarDistribution.swift in Sources */,
+				OBJ_158 /* UserReview.swift in Sources */,
+				OBJ_159 /* Yotpo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB92FBA41E9E646A00D9B127 /* Sources */ = {
+		OBJ_167 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				FB92FBAD1E9E646A00D9B127 /* yotpoUsageExampleTests.swift in Sources */,
+				OBJ_168 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_179 /* AppDelegate.swift in Sources */,
+				OBJ_180 /* ViewController.swift in Sources */,
+				OBJ_181 /* yotpoUsageExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_91 /* AFError.swift in Sources */,
+				OBJ_92 /* Alamofire.swift in Sources */,
+				OBJ_93 /* AlamofireExtended.swift in Sources */,
+				OBJ_94 /* AuthenticationInterceptor.swift in Sources */,
+				OBJ_95 /* CachedResponseHandler.swift in Sources */,
+				OBJ_96 /* Combine.swift in Sources */,
+				OBJ_97 /* DispatchQueue+Alamofire.swift in Sources */,
+				OBJ_98 /* EventMonitor.swift in Sources */,
+				OBJ_99 /* HTTPHeaders.swift in Sources */,
+				OBJ_100 /* HTTPMethod.swift in Sources */,
+				OBJ_101 /* MultipartFormData.swift in Sources */,
+				OBJ_102 /* MultipartUpload.swift in Sources */,
+				OBJ_103 /* NetworkReachabilityManager.swift in Sources */,
+				OBJ_104 /* Notifications.swift in Sources */,
+				OBJ_105 /* OperationQueue+Alamofire.swift in Sources */,
+				OBJ_106 /* ParameterEncoder.swift in Sources */,
+				OBJ_107 /* ParameterEncoding.swift in Sources */,
+				OBJ_108 /* Protected.swift in Sources */,
+				OBJ_109 /* RedirectHandler.swift in Sources */,
+				OBJ_110 /* Request.swift in Sources */,
+				OBJ_111 /* RequestInterceptor.swift in Sources */,
+				OBJ_112 /* RequestTaskMap.swift in Sources */,
+				OBJ_113 /* Response.swift in Sources */,
+				OBJ_114 /* ResponseSerialization.swift in Sources */,
+				OBJ_115 /* Result+Alamofire.swift in Sources */,
+				OBJ_116 /* RetryPolicy.swift in Sources */,
+				OBJ_117 /* ServerTrustEvaluation.swift in Sources */,
+				OBJ_118 /* Session.swift in Sources */,
+				OBJ_119 /* SessionDelegate.swift in Sources */,
+				OBJ_120 /* StringEncoding+Alamofire.swift in Sources */,
+				OBJ_121 /* URLConvertible+URLRequestConvertible.swift in Sources */,
+				OBJ_122 /* URLEncodedFormEncoder.swift in Sources */,
+				OBJ_123 /* URLRequest+Alamofire.swift in Sources */,
+				OBJ_124 /* URLSessionConfiguration+Alamofire.swift in Sources */,
+				OBJ_125 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FB92FBAA1E9E646A00D9B127 /* PBXTargetDependency */ = {
+		OBJ_162 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB92FB941E9E646A00D9B127 /* yotpoUsageExample */;
-			targetProxy = FB92FBA91E9E646A00D9B127 /* PBXContainerItemProxy */;
+			target = "Alamofire::Alamofire" /* Alamofire */;
+			targetProxy = 65C4451626C1894200F649C9 /* PBXContainerItemProxy */;
+		};
+		OBJ_173 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "yotpoKit::yotpoKitTests" /* yotpoKitTests */;
+			targetProxy = 65C4451926C1894300F649C9 /* PBXContainerItemProxy */;
+		};
+		OBJ_185 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "yotpoKit::yotpoKit" /* yotpoKit */;
+			targetProxy = 65C4451726C1894200F649C9 /* PBXContainerItemProxy */;
+		};
+		OBJ_186 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Alamofire::Alamofire" /* Alamofire */;
+			targetProxy = 65C4451826C1894200F649C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		FB92FB9B1E9E646A00D9B127 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB92FB9C1E9E646A00D9B127 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FB92FBA01E9E646A00D9B127 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB92FBA11E9E646A00D9B127 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		FB7575F11E9D08CC00D1E844 /* Debug */ = {
+		OBJ_129 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.1.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.1.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_135 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = yotpoKit.xcodeproj/yotpoKit_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = yotpoKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = yotpoKit;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = yotpoKit.xcodeproj/yotpoKit_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = yotpoKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = yotpoKit;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = yotpoKit.xcodeproj/yotpoKitTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = yotpoKitTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		OBJ_177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = yotpoKit.xcodeproj/yotpoKitTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = yotpoKitTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
-					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		FB7575F21E9D08CC00D1E844 /* Release */ = {
+		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_BITCODE = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
-		FB7575F41E9D08CC00D1E844 /* Debug */ = {
+		OBJ_88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = PFQ8633X58;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				INFOPLIST_FILE = yotpoKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = yotpoKit.xcodeproj/Alamofire_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					CFNetwork,
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Alamofire;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Alamofire;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
-		FB7575F51E9D08CC00D1E844 /* Release */ = {
+		OBJ_89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = PFQ8633X58;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				INFOPLIST_FILE = yotpoKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = yotpoKit.xcodeproj/Alamofire_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					CFNetwork,
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Alamofire;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		FB92FBBA1E9E646A00D9B127 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PFQ8633X58;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = yotpoUsageExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
-				VALIDATE_WORKSPACE = YES;
-			};
-			name = Debug;
-		};
-		FB92FBBB1E9E646A00D9B127 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PFQ8633X58;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = yotpoUsageExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
-				VALIDATE_WORKSPACE = YES;
-			};
-			name = Release;
-		};
-		FB92FBBC1E9E646A00D9B127 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = PFQ8633X58;
-				INFOPLIST_FILE = yotpoUsageExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yotpoUsageExample.app/yotpoUsageExample";
-			};
-			name = Debug;
-		};
-		FB92FBBD1E9E646A00D9B127 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = PFQ8633X58;
-				INFOPLIST_FILE = yotpoUsageExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = amaro.yotpoUsageExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yotpoUsageExample.app/yotpoUsageExample";
+				TARGET_NAME = Alamofire;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB7575D91E9D08CC00D1E844 /* Build configuration list for PBXProject "yotpoKit" */ = {
+		OBJ_128 /* Build configuration list for PBXNativeTarget "AlamofirePackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FB7575F11E9D08CC00D1E844 /* Debug */,
-				FB7575F21E9D08CC00D1E844 /* Release */,
+				OBJ_129 /* Debug */,
+				OBJ_130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB7575F31E9D08CC00D1E844 /* Build configuration list for PBXNativeTarget "yotpoKit" */ = {
+		OBJ_134 /* Build configuration list for PBXNativeTarget "yotpoKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FB7575F41E9D08CC00D1E844 /* Debug */,
-				FB7575F51E9D08CC00D1E844 /* Release */,
+				OBJ_135 /* Debug */,
+				OBJ_136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB92FBC01E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExample" */ = {
+		OBJ_164 /* Build configuration list for PBXNativeTarget "yotpoKitPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FB92FBBA1E9E646A00D9B127 /* Debug */,
-				FB92FBBB1E9E646A00D9B127 /* Release */,
+				OBJ_165 /* Debug */,
+				OBJ_166 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB92FBC11E9E646A00D9B127 /* Build configuration list for PBXNativeTarget "yotpoUsageExampleTests" */ = {
+		OBJ_170 /* Build configuration list for PBXAggregateTarget "yotpoKitPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FB92FBBC1E9E646A00D9B127 /* Debug */,
-				FB92FBBD1E9E646A00D9B127 /* Release */,
+				OBJ_171 /* Debug */,
+				OBJ_172 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_175 /* Build configuration list for PBXNativeTarget "yotpoKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_176 /* Debug */,
+				OBJ_177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "yotpoKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_87 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_88 /* Debug */,
+				OBJ_89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FB7575D61E9D08CC00D1E844 /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }
