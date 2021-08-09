@@ -30,6 +30,7 @@ let package = Package(
         .testTarget(
             name: "yotpoKitTests",
             dependencies: ["yotpoKit"],
+            resources: [.copy: "Info.plist"],
             exclude: ["yotpoUsageExampleTests/Info.plist",
                       "yotpoUsageExample/Info.plist"]),
     ]
