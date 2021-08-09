@@ -5,6 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "yotpoKit",
+    platforms: [
+        .iOS(.v11),
+        .tvOS(.v10),
+        .watchOS(.v3),
+        .macOS(.v10_15)
+    ],
     defaultLocalization: "pt",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
