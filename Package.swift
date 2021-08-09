@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "yotpoKit",
     platforms: [
-        .iOS(.v11),
+        .iOS(.v12),
         .tvOS(.v10),
         .watchOS(.v3),
         .macOS(.v10_15)
