@@ -5,13 +5,13 @@ import PackageDescription
 
 let package = Package(
     name: "yotpoKit",
+    defaultLocalization: "pt",
     platforms: [
         .iOS(.v12),
         .tvOS(.v10),
         .watchOS(.v3),
         .macOS(.v10_15)
     ],
-    defaultLocalization: "pt",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -26,11 +26,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "yotpoKit",
-            dependencies: ["Alamofire"]),
+            dependencies: ["Alamofire"],
+            exclude: ["Info.plist"]),
         .testTarget(
             name: "yotpoKitTests",
             dependencies: ["yotpoKit"],
-            resources: [.copy: "Info.plist"],
             exclude: ["yotpoUsageExampleTests/Info.plist",
                       "yotpoUsageExample/Info.plist"]),
     ]
