@@ -7,7 +7,7 @@ let package = Package(
     name: "yotpoKit",
     defaultLocalization: "pt",
     platforms: [
-        .iOS(.v12),
+        .iOS(.v11),
         .tvOS(.v10),
         .watchOS(.v3),
         .macOS(.v10_15)
